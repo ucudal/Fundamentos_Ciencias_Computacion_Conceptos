@@ -14,7 +14,7 @@ En este repositorio definimos y presentamos contenidos útiles para los cursos d
 
 > **🚀 ¡Visita este documento on-line!**
 >
-> [Fundamentos en Ciencias de la Computación](https://pilasguru.github.io/PoC-FCC/)
+> [Fundamentos en Ciencias de la Computación](https://fundamentos.exito.uy)
 
 O continúa leyendo en [este mismo repositorio](docs/index.md)
 
