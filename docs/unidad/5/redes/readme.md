@@ -1,4 +1,4 @@
-# Redes neuronales
+# Redes neuronales, DeepLearning
 ## [Redes Neuronales](./1_RN.md)
 
 Introducción. Juego.
