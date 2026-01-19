@@ -1,4 +1,4 @@
-# Redes neuronales, deep learning y computer vision
+# Redes neuronales
 ## [Redes Neuronales](./1_RN.md)
 
 Introducción. Juego.
