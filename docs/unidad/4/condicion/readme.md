@@ -1,5 +1,5 @@
 # Concurrencia y Sincronización en Sistemas Informáticos
-## Unidad 4: Pensar en Estructuras y Procesos
+## Unidad 4: Pensar en estructuras y procesos
 
 ---
 
@@ -11,8 +11,8 @@ Estos problemas cotidianos son análogos a los que enfrentan las computadoras cu
 
 ---
 
-## 1. Conceptos Fundamentales
-### 1.1 La Metáfora de la Cocina Compartida
+## 1. Conceptos 
+### 1.1 La metáfora de la cocina compartida
 Imagina una cocina compartida en una residencia estudiantil:
 
 - **Procesos** = Los estudiantes que quieren cocinar
@@ -143,7 +143,6 @@ Paso 3: Guardar nuevo saldo → $700
 ```
 
 **¿Qué pasa si se ejecutan al mismo tiempo?**
-
 ```
 Línea de Tiempo:
 
@@ -162,18 +161,18 @@ t=6: José guarda → SALDO = $700
 **Resultado esperado:** $1200
 **Resultado real:** $700 o $1500 (¡depende de quién escriba último!)
 
-### 2.3 Ejercicio Mental: El Contador
+### 2.3 Ejercicio mental: El Contador
 
 Dos personas deben incrementar un contador 1000 veces cada una.
 
 ```
-Contador inicial = 0
+contador = 0
 
 Persona A: hacer 1000 veces { contador = contador + 1 }
 Persona B: hacer 1000 veces { contador = contador + 1 }
 
 ¿Resultado esperado? 2000
-¿Resultado real? Puede ser cualquier número entre 1000 y 2000
+¿Resultado real? Puede ser cualquier número entre 1000 y 2000 (notar que *contador* es una variable compartida por ambas personas, en el cambio de contexto se 
 ```
 
 **¿Por qué?**
@@ -184,6 +183,42 @@ La operación "contador = contador + 1" NO es atómica. Requiere:
 3. **ESCRIBIR** el resultado
 
 Si A y B **leen** al mismo tiempo, pueden **sobrescribirse** mutuamente.
+
+## Tabla detallada de las primeras 5 iteraciones:
+
+| Momento | Acción Persona A | Acción Persona B | Valor Contador | Incrementos perdidos |
+|---------|------------------|------------------|----------------|---------------------|
+| t=0 | - | - | 0 | 0 |
+| t=1 | Lee: 0 | - | 0 | 0 |
+| t=2 | - | Lee: 0 | 0 | 0 |
+| t=3 | Calcula: 0+1=1 | - | 0 | 0 |
+| t=4 | - | Calcula: 0+1=1 | 0 | 0 |
+| t=5 | Escribe: 1 | - | 1 | 0 |
+| t=6 | - | Escribe: 1 | 1 | **1** ⚠️ |
+| t=7 | Lee: 1 | - | 1 | 1 |
+| t=8 | - | Lee: 1 | 1 | 1 |
+| t=9 | Calcula: 1+1=2 | - | 1 | 1 |
+| t=10 | - | Calcula: 1+1=2 | 1 | 1 |
+| t=11 | Escribe: 2 | - | 2 | 1 |
+| t=12 | - | Escribe: 2 | 2 | **2** ⚠️ |
+| t=13 | Lee: 2 | - | 2 | 2 |
+| t=14 | - | Lee: 2 | 2 | 2 |
+| t=15 | Calcula: 2+1=3 | - | 2 | 2 |
+| t=16 | - | Calcula: 2+1=3 | 2 | 2 |
+| t=17 | Escribe: 3 | - | 3 | 2 |
+| t=18 | - | Escribe: 3 | 3 | **3** ⚠️ |
+| t=19 | Lee: 3 | - | 3 | 3 |
+| t=20 | - | Lee: 3 | 3 | 3 |
+| t=21 | Calcula: 3+1=4 | - | 3 | 3 |
+| t=22 | - | Calcula: 3+1=4 | 3 | 3 |
+| t=23 | Escribe: 4 | - | 4 | 3 |
+| t=24 | - | Escribe: 4 | 4 | **4** ⚠️ |
+| t=25 | Lee: 4 | - | 4 | 4 |
+| t=26 | - | Lee: 4 | 4 | 4 |
+| t=27 | Calcula: 4+1=5 | - | 4 | 4 |
+| t=28 | - | Calcula: 4+1=5 | 4 | 4 |
+| t=29 | Escribe: 5 | - | 5 | 4 |
+| t=30 | - | Escribe: 5 | 5 | **5** ⚠️ |
 
 ---
 
