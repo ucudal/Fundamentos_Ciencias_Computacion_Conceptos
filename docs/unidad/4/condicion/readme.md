@@ -1145,3 +1145,48 @@ En la clase trabajarán en grupos para:
 
 **Recuerda:** No hay UNA respuesta correcta. Lo importante es el **razonamiento** y poder **explicar** por qué tu solución funciona.
 *Fundamentos en Ciencias de la Computación - 2026*
+
+# Referencias
+Tanenbaum & Bos (2015), Capítulo 2, Sección 2.3 (pp. 115-128)
+Enfoque en: Race conditions, regiones críticas, exclusión mutua
+Tanenbaum & Bos (2015), Capítulo 2, Sección 2.3.4-2.3.6 (pp. 122-135)
+Semáforos
+Mutexes
+Monitores
+
+Problema de los Filósofos Comensales
+Lectura principal: Tanenbaum & Bos (2015), Capítulo 2, Sección 2.5.4 (pp. 148-150)
+Problema Productor-Consumidor
+Lectura principal: Tanenbaum & Bos (2015), Capítulo 2, Sección 2.5.2 (pp. 145-147)
+Problema Lectores-Escritores
+Lectura principal: Tanenbaum & Bos (2015), Capítulo 2, Sección 2.5.3 (pp. 147-148)
+
+Planificación de Procesos (Round Robin)
+Lectura principal: Tanenbaum & Bos (2015), Capítulo 2, Sección 2.4.2-2.4.4 (pp. 136-144)
+
+Algoritmos de planificación
+Round Robin específicamente en páginas 140-141
+
+Deadlock
+Lectura principal: Tanenbaum & Bos (2015), Capítulo 6 COMPLETO (pp. 351-388)
+
+Sección 6.2: Introducción a deadlocks (pp. 354-359)
+Sección 6.5: Prevención (condiciones de Coffman) (pp. 368-374)
+Sección 6.6: Evitación (Algoritmo del Banquero) (pp. 374-380)
+Sección 6.7: Detección y recuperación (pp. 380-386)
+
+Artículo: Coffman et al. (1971) - Las cuatro condiciones necesarias
+
+Sincronización de Relojes (Algoritmo de Cristian)
+Lectura principal:
+
+Tanenbaum & Bos (2015), Capítulo 8, Sección 8.1.2 (pp. 487-492)
+
+Clock Synchronization en sistemas distribuidos
+Algoritmo de Cristian específicamente
+
+Artículo: Lamport (1978) - Fundamentos teóricos de sincronización temporal
+
+Artículo original: Dijkstra (1965) - Planteamiento original del problema
+Lectura complementaria:
+OSTEP Capítulo 31, Sección 31.4 (Dining Philosophers)
