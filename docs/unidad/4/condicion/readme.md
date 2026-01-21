@@ -538,12 +538,12 @@ ESCRITOR:
 ```
 BARBERÍA:
 ┌─────────────────────────┐
-│ Silla de corte: [  ]   │
+│ Silla de corte: [  ]    │
 │                         │
-│ Sala de espera:        │
-│ [X] [X] [ ] (3 sillas) │
+│ Sala de espera:         │
+│ [X] [X] [ ] (3 sillas)  │
 │                         │
-│ Barbero: 💤            │
+│ Barbero: zzz            │
 └─────────────────────────┘
 ```
 
@@ -666,7 +666,6 @@ Para P2:
 ```
 
 ### 6.4 Efecto del Quantum
-
 **Quantum muy pequeño (ej: 1ms):**
 - ✅ Muy interactivo, respuesta rápida
 - ❌ Mucho tiempo perdido cambiando de proceso
@@ -835,7 +834,7 @@ Eliminar Espera Circular:
 → Siempre solicitar en orden creciente
 ```
 
-**2. EVITACIÓN:** Algoritmo del Banquero
+**2. EVITAR:** Algoritmo del Banquero
 
 ```
 Antes de asignar un recurso, verificar:
