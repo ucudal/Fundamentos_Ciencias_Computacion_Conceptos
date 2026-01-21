@@ -2,7 +2,6 @@
 ## Unidad 4: Pensar en estructuras y procesos
 
 ---
-
 ## Introducción
 
 ¿Qué pasa cuando varias personas intentan usar el mismo baño al mismo tiempo? ¿O cuando varios estudiantes quieren imprimir en la misma impresora? ¿Cómo se organizan los autos en un semáforo?
