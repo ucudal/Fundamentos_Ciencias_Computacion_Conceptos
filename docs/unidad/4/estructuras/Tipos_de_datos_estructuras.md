@@ -207,6 +207,22 @@ Incrementar front
 - Caso base: cola vacía cuando back = front - 1
 - La cola está llena cuando hay theArray.capacity() - 1 elementos
 - Requiere manejo cuidadoso de casos especiales
+## Notas Finales
+
+Este material está diseñado para **pensar** sobre las diferentes estructuras de datos. El objetivo es desarrollar **intuición** sobre:
+
+- Cómo funcionan los lenguajes de programación a bajo nivel
+- Cómo visualizar los problemas con diagramas
+
+En la clase trabajarán en grupos para:
+- Dibujar escenarios, donde se agregan / eliminan datos de estas estructuras y como se comportan
+- Simular ejecuciones paso a paso
+- Discutir alternativas
+- Presentar soluciones conceptuales
+
+**Recuerda:** No hay UNA respuesta correcta. Lo importante es el **razonamiento** y poder **explicar** por qué la estructura es más o menos adecuada para un problema dado, y que no es magia, y nada es gratis.
+
+*Fundamentos en Ciencias de la Computación - 2026*
 
 # Referencias
 Weiss, M. A. (2014). Data Structures and Algorithm Analysis in C++ (4th ed.). Florida International University.
