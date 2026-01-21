@@ -1,6 +1,6 @@
 # Pensar en Estructuras y Procesos
 
-## [Estructuras de datos](estructuras/readme.md)
+## [Estructuras de datos](estructuras/Tipos de datos y estructuras.md)
 
 Listas, pilas, colas
 
