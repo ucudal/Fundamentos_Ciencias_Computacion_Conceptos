@@ -4,7 +4,7 @@
 
 Listas, pilas, colas
 
-## [Condición de carrera y concurrencia, Problemas clásicos de sincronización](condicion/readme.md)
+## [Condición de carrera y concurrencia, Problemas clásicos de sincronización](condicion/Procesos_concurrencia.md)
 
 Round Robin, Cristian, Filósofos
 
