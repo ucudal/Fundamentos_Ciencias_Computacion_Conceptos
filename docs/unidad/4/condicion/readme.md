@@ -12,9 +12,7 @@ Estos problemas cotidianos son análogos a los que enfrentan las computadoras cu
 ---
 
 ## 1. Conceptos Fundamentales
-
 ### 1.1 La Metáfora de la Cocina Compartida
-
 Imagina una cocina compartida en una residencia estudiantil:
 
 - **Procesos** = Los estudiantes que quieren cocinar
@@ -31,7 +29,6 @@ Estudiante C también necesita la hornalla para saltear
 → Conflicto: Solo hay una hornalla
 → Necesitamos REGLAS para organizarnos
 ```
-
 **Escenario 2: Con coordinación**
 ```
 Regla: Quien llega primero, usa la hornalla hasta terminar
@@ -39,7 +36,6 @@ Los demás esperan su turno en orden de llegada
 ```
 
 ### 1.2 Procesos e Hilos: ¿Qué son?
-
 **Proceso**: Un programa en ejecución
 - Ejemplo: Tu navegador Chrome es un proceso
 - Ejemplo: Word abierto es otro proceso
@@ -83,15 +79,27 @@ Chef B: Vigila el horno continuamente
 → Dos personas, dos tareas, en verdadero paralelo
 
 **Diagrama:**
-```
-CONCURRENCIA (1 procesador):
-Tiempo: |--A--B--A--C--B--A--C--|
-        └→ Se turnan
+```mermaid
+gantt
+    title Concurrencia vs Paralelismo
+    dateFormat s
+    axisFormat %S
 
-PARALELISMO (2 procesadores):
-CPU 1: |--A--A--A--A--|
-CPU 2: |--B--B--C--C--|
-       └→ Simultáneo real
+    section Concurrencia (1 CPU)
+    Proceso A    :a1, 0, 1s
+    Proceso B    :b1, after a1, 1s
+    Proceso A    :a2, after b1, 1s
+    Proceso C    :c1, after a2, 1s
+    Proceso B    :b2, after c1, 1s
+    Proceso A    :a3, after b2, 1s
+    Proceso C    :c2, after a3, 1s
+
+    section Paralelismo CPU 1
+    Proceso A    :pa1, 0, 4s
+
+    section Paralelismo CPU 2
+    Proceso B    :pb1, 0, 2s
+    Proceso C    :pc1, after pb1, 2s
 ```
 
 ---
@@ -302,35 +310,68 @@ Ahora **NO PUEDE** haber race condition porque solo uno accede a la vez.
 
 ## 5. Problemas Clásicos de Sincronización
 
-### 5.1 El Problema de los Filósofos Comensales
+### 5.1 El Problema de los Comensales y Filósofos Chinos
 
-**Historia:** Cinco filósofos sentados en una mesa circular. Entre cada par hay un tenedor. Para comer, cada filósofo necesita DOS tenedores (izquierdo y derecho).
+**Historia:** Cinco filósofos sentados en una mesa circular. Entre cada par hay un palito. Para comer, cada filósofo necesita DOS palitos (izquierdo y derecho).
 
 **Diagrama:**
-```
-        F1
-       /  \
-     T1    T5
-     /      \
-   F2        F5
-    |        |
-   T2        T4
-     \      /
-      F3--T3--F4
+```mermaid
+graph TB
+    subgraph "Mesa Circular - Filósofos Comensales"
+        F1((F1<br/>Filósofo 1))
+        F2((F2<br/>Filósofo 2))
+        F3((F3<br/>Filósofo 3))
+        F4((F4<br/>Filósofo 4))
+        F5((F5<br/>Filósofo 5))
+        
+        P1[Palito 1]
+        P2[Palito 2]
+        P3[Palito 3]
+        P4[Palito 4]
+        P5[Palito 5]
+        
+        F1 ---|izq| P1
+        F1 ---|der| P5
+        
+        F2 ---|izq| P2
+        F2 ---|der| P1
+        
+        F3 ---|izq| P3
+        F3 ---|der| P2
+        
+        F4 ---|izq| P4
+        F4 ---|der| P3
+        
+        F5 ---|izq| P5
+        F5 ---|der| P4
+    end
+    
+    style F1 fill:#9cf,stroke:#333,stroke-width:2px
+    style F2 fill:#9cf,stroke:#333,stroke-width:2px
+    style F3 fill:#9cf,stroke:#333,stroke-width:2px
+    style F4 fill:#9cf,stroke:#333,stroke-width:2px
+    style F5 fill:#9cf,stroke:#333,stroke-width:2px
+    
+    style P1 fill:#fc9,stroke:#333,stroke-width:2px
+    style P2 fill:#fc9,stroke:#333,stroke-width:2px
+    style P3 fill:#fc9,stroke:#333,stroke-width:2px
+    style P4 fill:#fc9,stroke:#333,stroke-width:2px
+    style P5 fill:#fc9,stroke:#333,stroke-width:2px
+
 ```
 
 **Ciclo de vida de un filósofo:**
 ```
 REPETIR SIEMPRE:
-  - PENSAR (no necesita tenedores)
-  - Tomar tenedor izquierdo
-  - Tomar tenedor derecho
+  - PENSAR (no necesita palitos)
+  - Tomar palito izquierdo
+  - Tomar palito derecho
   - COMER
-  - Soltar tenedor izquierdo
-  - Soltar tenedor derecho
+  - Soltar palito izquierdo
+  - Soltar palito derecho
 ```
 
-**Problema 1: DEADLOCK (Interbloqueo)**
+**Problema 1: DEADLOCK**
 
 ```
 ¿Qué pasa si todos hacen esto?
@@ -341,13 +382,13 @@ t=3: F3 toma T3
 t=4: F4 toma T4
 t=5: F5 toma T5
 
-¡Todos esperan el tenedor derecho que ya está tomado!
+¡Todos esperan el palito derecho que ya está tomado!
 → DEADLOCK: Nadie puede avanzar, todos bloqueados
 ```
 
-**Problema 2: INANICIÓN (Starvation)**
+**Problema 2: INANICIÓN**
 
-Imagina que F1 y F2 comen muy rápido y se turnan constantemente. F3 nunca logra conseguir ambos tenedores.
+Imagina que F1 y F2 comen muy rápido y se turnan constantemente. F3 nunca logra conseguir ambos palitos.
 → INANICIÓN: F3 espera infinitamente
 
 **Posibles Soluciones:**
@@ -368,12 +409,12 @@ Filósofos pares (F2, F4):
 Máximo 4 filósofos pueden intentar comer simultáneamente
 (usando un semáforo con contador = 4)
 
-→ Siempre al menos uno podrá tomar ambos tenedores
+→ Siempre al menos uno podrá tomar ambos palitos
 ```
 
 **Solución 3: Todo o nada**
 ```
-Un filósofo solo puede tomar AMBOS tenedores simultáneamente
+Un filósofo solo puede tomar AMBOS palitos simultáneamente
 (dentro de una sección crítica protegida)
 
 → Previene tomar uno y esperar el otro
@@ -397,20 +438,16 @@ P3 →               [  ][  ][ ]           → C3
 ```
 
 **Problemas a resolver:**
-
 1. **Almacén lleno:** Productor debe esperar hasta que haya espacio
 2. **Almacén vacío:** Consumidor debe esperar hasta que haya productos
 3. **Acceso simultáneo:** Solo uno a la vez puede agregar/quitar
-
 **Solución conceptual:**
-
 ```
 SEMÁFOROS NECESARIOS:
 
 espacios_libres = 10    (inicialmente el almacén está vacío)
 productos = 0           (no hay productos al inicio)
 mutex = 1               (para acceso exclusivo al almacén)
-
 
 PRODUCTOR:
   1. Crear un producto
@@ -431,9 +468,7 @@ CONSUMIDOR:
 ```
 
 ### 5.3 El Problema de Lectores-Escritores
-
 **Escenario:** Una base de datos compartida
-
 - **Lectores:** Solo leen datos (pueden varios simultáneamente)
 - **Escritores:** Modifican datos (solo uno a la vez, sin lectores)
 
@@ -452,7 +487,6 @@ Estado 4: [E E] → ¡PROHIBIDO!
 ```
 
 **Solución conceptual:**
-
 ```
 VARIABLES COMPARTIDAS:
 numero_lectores = 0     (cuántos están leyendo)
@@ -745,19 +779,19 @@ Para que haya deadlock, deben cumplirse **las 4 condiciones**:
 **1. Exclusión Mutua:**
 ```
 El recurso no puede compartirse
-Ejemplo: Un tenedor solo puede usarlo un filósofo
+Ejemplo: Un palito solo puede usarlo un filósofo
 ```
 
 **2. Retención y Espera:**
 ```
 Un proceso retiene recursos mientras espera otros
-Ejemplo: Filósofo tiene tenedor izquierdo, espera el derecho
+Ejemplo: Filósofo tiene palito izquierdo, espera el derecho
 ```
 
 **3. No Apropiación:**
 ```
 No se pueden quitar recursos por la fuerza
-Ejemplo: No puedes arrancarle el tenedor a un filósofo
+Ejemplo: No puedes arrancarle el palito a un filósofo
 ```
 
 **4. Espera Circular:**
