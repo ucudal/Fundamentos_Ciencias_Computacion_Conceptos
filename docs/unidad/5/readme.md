@@ -4,6 +4,6 @@
 
 Aprendizaje supervisado vs. no supervisado
 
-## [Redes neuronales y Deep Learning](redes/readme.md)
+## [IA Generativa](generativa/readme.md)
 
 Redes Neuronales, GANs, diffusion models y LLM.
