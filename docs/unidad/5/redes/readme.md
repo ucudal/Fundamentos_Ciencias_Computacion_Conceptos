@@ -1,4 +1,4 @@
-# Redes neuronales, DeepLearning
+# Inteligencia Artificial Generativa
 ## [IA Generativa](2_generativa.md)
 
 Reflexiones sobre la creatividad.
