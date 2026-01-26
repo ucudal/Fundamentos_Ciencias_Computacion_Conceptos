@@ -1,9 +1,9 @@
 # Alfabetización en Inteligencia Artificial
 
-## [Introducción a IA y aprendizaje](ia/readme.md)
+## [Introducción a IA y Machine Learning](ia/readme.md)
 
-Aprendizaje supervisado vs. no supervisado
+Definición de IA, Aprendizaje supervisado y no supervisado, BIAS, impacto ambiental.
 
 ## [IA Generativa](redes/readme.md)
 
-Redes Neuronales, GANs, diffusion models y LLM.
+Redes Neuronales, GANs, diffusion models, LLM, Deepfakes.
