@@ -1,8 +1,4 @@
 # Redes neuronales, DeepLearning
-## [Redes Neuronales](./1_RN.md)
-
-Introducción. Juego.
-
 ## [IA Generativa](2_generativa.md)
 
 Reflexiones sobre la creatividad.
