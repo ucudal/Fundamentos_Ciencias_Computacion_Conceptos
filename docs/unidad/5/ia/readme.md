@@ -8,15 +8,11 @@ Ideas de alto nivel. Juego.
 
 Impacto.
 
-## [Algoritmos](./3_algoritmos.md)
-
-Qué es un algoritmo, componentes básicos. Matríz Ética. Actividad práctica
-
 ## [Machine Learning Supervisado](./4_supervisado.md)
 
 Conceptos clave. Ejercicio de clasificador.
 
-## [nociones sobre Bias en IA](./5_bias.md)
+## [Nociones sobre Bias en IA](./5_bias.md)
 
 Qué es el sesgo, porqué importa, cómo prevenirlo. Ejemplos
 
