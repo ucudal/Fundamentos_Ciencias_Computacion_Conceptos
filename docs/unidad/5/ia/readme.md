@@ -8,15 +8,15 @@ Ideas de alto nivel. Juego.
 
 Impacto.
 
-## [Machine Learning Supervisado](./4_supervisado.md)
+## [Machine Learning Supervisado](./3_supervisado.md)
 
 Conceptos clave. Ejercicio de clasificador.
 
-## [Nociones sobre Bias en IA](./5_bias.md)
+## [Nociones sobre Bias en IA](./4_bias.md)
 
 Qué es el sesgo, porqué importa, cómo prevenirlo. Ejemplos
 
-## [Redes Neuronales](./1_RN.md)
+## [Redes Neuronales](./5_RN.md)
 
 Introducción. Juego.
 
