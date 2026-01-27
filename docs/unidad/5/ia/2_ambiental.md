@@ -1,6 +1,6 @@
 # Impacto ambiental de la IA
 
-### Entender la arquitectura de un sistema con IA
+### Arquitectura básica de un sistema con IA
 
 Qué recursos necesita.
 
