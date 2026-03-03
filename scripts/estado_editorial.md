@@ -1,27 +1,3 @@
-<div style="background-color: #143361; padding: 10px; text-align: center; margin: 0;">
-  <img src="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg" alt="UCU" style="width:200px; margin:0;">
-</div>
-
-# Universidad Católica del Uruguay
-
-## Facultad de Ingeniería y Tecnologías
-
-### Fundamentos en Ciencias de la Computación
-
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-
-En este repositorio definimos y presentamos contenidos útiles para los cursos de Fundamentos en Ciencias de la Computación.
-
-> **🚀 ¡Visita este documento on-line!**
->
-> [Fundamentos en Ciencias de la Computación](https://fundamentos.exito.uy)
-
-O continúa leyendo en [este mismo repositorio](docs/index.md)
-
----
-
-<!-- ESTADO_EDITORIAL_START -->
-
 ## Estado Editorial
 
 ### 1. Ser Ing. en el s.XXI
@@ -69,7 +45,4 @@ O continúa leyendo en [este mismo repositorio](docs/index.md)
 |------------|--------|-------------|----------------------|
 | app | DRAFT | Nombre del docente | 2026-01-01 |
 | roles | DRAFT | Nombre del docente | 2026-01-01 |
-
-
-<!-- ESTADO_EDITORIAL_END -->
 
