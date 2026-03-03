@@ -1,5 +1,9 @@
-<div style="background-color: #143361; padding: 10px; text-align: center; margin: 0;">
-  <img src="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg" alt="UCU" style="width:200px; margin:0;">
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/logo_ucu_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/logo_ucu_light.svg">
+    <img src="docs/images/logo_ucu_light.svg" alt="UCU" width="220">
+  </picture>
 </div>
 
 # Universidad Católica del Uruguay
