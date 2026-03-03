@@ -9,20 +9,6 @@ INSTRUCCIONES:
      - 7. Nombre de la unidad: unidad/7/readme.md
 -->
 
----
-# ======================================
-# ESTADO (descomentar solo uno)
-# ======================================
-
-status: DRAFT        # estructura inicial
-# status: IN_PROGRESS  # contenido parcial
-# status: REVIEW       # listo para revisión
-# status: COMPLETE     # aprobado y cerrado
-
-responsable: Nombre del docente
-ultima_actualizacion: AAAA-MM-DD
----
-
 # Título de la Unidad
 
 Breve descripción de la unidad (2–4 líneas máximo).
