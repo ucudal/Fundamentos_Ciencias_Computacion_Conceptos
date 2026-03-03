@@ -1,3 +1,17 @@
+---
+# ======================================
+# ESTADO (descomentar solo uno)
+# ======================================
+
+# status: DRAFT        # estructura inicial
+status: IN_PROGRESS  # contenido parcial
+# status: REVIEW       # listo para revisión
+# status: COMPLETE     # aprobado y cerrado
+
+responsable: @pilasguru
+ultima_actualizacion: 2025-11-20
+---
+
 # Shell y Bash: comandos, paths y scripts básicos
 
 ## [¿Qué software es un shell?](./1_shell.md)

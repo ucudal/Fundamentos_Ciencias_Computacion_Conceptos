@@ -1,3 +1,17 @@
+---
+# ======================================
+# ESTADO (descomentar solo uno)
+# ======================================
+
+# status: DRAFT        # estructura inicial
+status: IN_PROGRESS  # contenido parcial
+# status: REVIEW       # listo para revisión
+# status: COMPLETE     # aprobado y cerrado
+
+responsable: @LylCB
+ultima_actualizacion: 2026-01-26
+---
+
 # Inteligencia Artificial Generativa
 ## [IA Generativa](2_generativa.md)
 

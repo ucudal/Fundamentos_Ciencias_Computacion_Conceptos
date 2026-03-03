@@ -13,3 +13,17 @@ Thumbs.db
 # Application specific files
 site/
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.venv/
+
+# Archivos generados por scripts
+scripts/estado_editorial_raw.txt
+
+# Logs
+*.log
+
