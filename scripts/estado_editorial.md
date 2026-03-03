@@ -1,10 +1,5 @@
 ## Estado Editorial
 
-- ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) → Contenido inicial
-- ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) → En desarrollo
-- ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) → En revisión académica
-- ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) → Material finalizado
-
 ### 1. Ser Ing. en el s.XXI
 
 | Sub-unidad | Status | Responsable | Última actualización |

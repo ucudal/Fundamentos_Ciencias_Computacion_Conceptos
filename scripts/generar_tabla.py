@@ -106,11 +106,6 @@ badge = badge_global(porcentaje)
 # -----------------------------
 salida = "## Estado Editorial\n\n"
 
-salida += "- ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) → Contenido inicial\n"
-salida += "- ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) → En desarrollo\n"
-salida += "- ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) → En revisión académica\n"
-salida += "- ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) → Material finalizado\n\n"
-
 for unidad in sorted(agrupado.keys(), key=int):
     titulo = unidad_titulos.get(unidad, f"Unidad {unidad}")
     salida += f"### {titulo}\n\n"
