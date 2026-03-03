@@ -1,3 +1,17 @@
+---
+# ======================================
+# ESTADO (descomentar solo uno)
+# ======================================
+
+status: DRAFT        # estructura inicial
+# status: IN_PROGRESS  # contenido parcial
+# status: REVIEW       # listo para revisión
+# status: COMPLETE     # aprobado y cerrado
+
+responsable: Nombre del docente
+ultima_actualizacion: 2026-01-01
+---
+
 # Estructuras de datos
 ## Tipo de Dato Abstracto (TDA)
 Es una abstracción matemática definida como un conjunto de objetos junto con un conjunto de operaciones que se pueden realizar sobre ellos.

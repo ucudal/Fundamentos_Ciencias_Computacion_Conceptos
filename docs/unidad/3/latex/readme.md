@@ -1,3 +1,17 @@
+---
+# ======================================
+# ESTADO (descomentar solo uno)
+# ======================================
+
+status: DRAFT        # estructura inicial
+# status: IN_PROGRESS  # contenido parcial
+# status: REVIEW       # listo para revisión
+# status: COMPLETE     # aprobado y cerrado
+
+responsable: Nombre del docente
+ultima_actualizacion: 2026-01-01
+---
+
 # LaTeX - Estructura básica de informes académicos
 
 ## [Introducción: ¿Qué es LaTeX y para qué sirve?](./1_Introduccion.md)
