@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/logo_ucu_dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/images/logo_ucu_light.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/images/logo_ucu_dark.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="docs/images/logo_ucu_light.svg">
     <img src="docs/images/logo_ucu_light.svg" alt="UCU" width="220">
   </picture>
 </div>
