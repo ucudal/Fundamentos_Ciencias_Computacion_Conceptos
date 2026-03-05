@@ -4,7 +4,6 @@ from collections import Counter
 import re
 
 MKDOCS_FILE = "mkdocs.yml"
-RAW_FILE = "scripts/estado_editorial_raw.txt"
 OUTPUT_FILE = "scripts/estado_editorial.md"
 
 STATUS_BADGES = {
@@ -15,9 +14,6 @@ STATUS_BADGES = {
 }
 
 
-# -----------------------------
-# Badge global progreso
-# -----------------------------
 def badge_global(porcentaje):
     if porcentaje < 30:
         color = "red"
@@ -29,9 +25,6 @@ def badge_global(porcentaje):
     return f"![Progreso](https://img.shields.io/badge/progreso-{porcentaje}%25-{color})"
 
 
-# -----------------------------
-# Convierte usuario a link GitHub
-# -----------------------------
 def github_link(responsable):
     responsable = responsable.strip()
 
@@ -59,25 +52,33 @@ for item in config.get("nav", []):
 
 
 # -----------------------------
-# Leer RAW + contar estados
+# Leer metadata de archivos
 # -----------------------------
 agrupado = {}
 contador_estados = Counter()
 total_items = 0
 
-for linea in Path(RAW_FILE).read_text().splitlines():
+for path in Path("docs/unidad").glob("*/*/readme.md"):
 
-    linea = linea.strip()
-    if not linea:
+    unidad = path.parts[2]
+    subunidad = path.parts[3]
+
+    lines = path.read_text().splitlines()
+
+    status = ""
+    responsable = ""
+    fecha = ""
+
+    for line in lines[:5]:
+        if line.startswith("status:"):
+            status = line.split(":", 1)[1].strip()
+        elif line.startswith("responsable:"):
+            responsable = line.split(":", 1)[1].strip()
+        elif line.startswith("ultima_actualizacion:"):
+            fecha = line.split(":", 1)[1].strip()
+
+    if not status:
         continue
-
-    partes = linea.split("|")
-
-    if len(partes) != 5:
-        print(f"⚠ Línea ignorada por formato incorrecto: {linea}")
-        continue
-
-    unidad, subunidad, status, responsable, fecha = [p.strip() for p in partes]
 
     if unidad not in agrupado:
         agrupado[unidad] = []
@@ -93,11 +94,7 @@ for linea in Path(RAW_FILE).read_text().splitlines():
 # -----------------------------
 complete = contador_estados.get("COMPLETE", 0)
 
-if total_items > 0:
-    porcentaje = int((complete / total_items) * 100)
-else:
-    porcentaje = 0
-
+porcentaje = int((complete / total_items) * 100) if total_items else 0
 badge = badge_global(porcentaje)
 
 
@@ -107,7 +104,9 @@ badge = badge_global(porcentaje)
 salida = "## Estado Editorial\n\n"
 
 for unidad in sorted(agrupado.keys(), key=int):
+
     titulo = unidad_titulos.get(unidad, f"Unidad {unidad}")
+
     salida += f"### {titulo}\n\n"
     salida += "| Sub-unidad | Status | Responsable | Última actualización |\n"
     salida += "|------------|--------|-------------|----------------------|\n"
@@ -127,7 +126,7 @@ print(f"✔ Tabla generada en {OUTPUT_FILE}")
 
 
 # -----------------------------
-# Insertar en README.md
+# Insertar en README
 # -----------------------------
 readme_path = Path("README.md")
 readme = readme_path.read_text()
@@ -135,19 +134,19 @@ readme = readme_path.read_text()
 inicio = "<!-- ESTADO_EDITORIAL_START -->"
 fin = "<!-- ESTADO_EDITORIAL_END -->"
 
-bloque_editorial = f"""
+bloque = f"""
 {inicio}
 
 {badge}
 
-**Progreso global:** {porcentaje}%  
+**Progreso global:** {porcentaje}%
 
-### Estado editorial sub-secciones (de las Unidades)
+### Estado editorial sub-secciones
 
-- DRAFT: {contador_estados.get("DRAFT", 0)}
-- IN_PROGRESS: {contador_estados.get("IN_PROGRESS", 0)}
-- REVIEW: {contador_estados.get("REVIEW", 0)}
-- COMPLETE: {contador_estados.get("COMPLETE", 0)}
+- DRAFT: {contador_estados.get("DRAFT",0)}
+- IN_PROGRESS: {contador_estados.get("IN_PROGRESS",0)}
+- REVIEW: {contador_estados.get("REVIEW",0)}
+- COMPLETE: {contador_estados.get("COMPLETE",0)}
 
 ---
 
@@ -158,11 +157,11 @@ bloque_editorial = f"""
 
 readme = re.sub(
     f"{inicio}.*?{fin}",
-    bloque_editorial,
+    bloque,
     readme,
     flags=re.DOTALL
 )
 
 readme_path.write_text(readme)
 
-print("✔ README actualizado con dashboard editorial")
+print("✔ README actualizado")

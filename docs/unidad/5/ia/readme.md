@@ -1,16 +1,6 @@
----
-# ======================================
-# ESTADO (descomentar solo uno)
-# ======================================
-
-# status: DRAFT        # estructura inicial
-status: IN_PROGRESS  # contenido parcial
-# status: REVIEW       # listo para revisión
-# status: COMPLETE     # aprobado y cerrado
-
+status: IN_PROGRESS
 responsable: @LylCB
 ultima_actualizacion: 2026-01-27
----
 
 # Introducción a IA y aprendizaje
 

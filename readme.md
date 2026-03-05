@@ -28,13 +28,14 @@ O continúa leyendo en [este mismo repositorio](docs/index.md)
 
 
 
+
 <!-- ESTADO_EDITORIAL_START -->
 
 ![Progreso](https://img.shields.io/badge/progreso-12%25-red)
 
-**Progreso global:** 12%  
+**Progreso global:** 12%
 
-### Estado editorial sub-secciones (de las Unidades)
+### Estado editorial sub-secciones
 
 - DRAFT: 10
 - IN_PROGRESS: 4
@@ -94,6 +95,7 @@ O continúa leyendo en [este mismo repositorio](docs/index.md)
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
 
 
 

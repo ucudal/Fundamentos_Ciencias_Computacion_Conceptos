@@ -4,6 +4,8 @@ theme:
   logo: images/logo.png
 extra_css:
   - stylesheets/extra.css
+exclude_docs: |
+  _plantillas/
 nav:
   - Inicio: index.md
   - Unidades:

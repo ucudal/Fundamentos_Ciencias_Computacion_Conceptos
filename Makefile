@@ -14,7 +14,7 @@ install:
 	$(PYTHON) -m pip install -r requirements.txt
 
 check:
-	./scripts/check_estructura.sh
+	PYTHON=$(PYTHON) ./scripts/check_estructura.sh
 
 clean:
 	rm -f scripts/estado_editorial_raw.txt

@@ -1,16 +1,6 @@
----
-# ======================================
-# ESTADO (descomentar solo uno)
-# ======================================
-
-# status: DRAFT        # estructura inicial
-status: IN_PROGRESS  # contenido parcial
-# status: REVIEW       # listo para revisión
-# status: COMPLETE     # aprobado y cerrado
-
+status: IN_PROGRESS
 responsable: @pilasguru
 ultima_actualizacion: 2025-11-20
----
 
 # LaTeX - Estructura básica de informes académicos
 

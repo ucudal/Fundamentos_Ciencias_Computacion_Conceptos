@@ -103,7 +103,7 @@ if [ $ERROR -eq 0 ]; then
     echo
     echo "📄 Generando tabla..."
 
-    python3 scripts/generar_tabla.py || exit 1
+    $PYTHON scripts/generar_tabla.py || exit 1
 
     echo "✔ Tabla generada correctamente."
 else
