@@ -7,14 +7,17 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  features:
+    - navigation.instant
   logo: images/logo.png
 
   features:
     - navigation.tabs
-    - navigation.sections
     - navigation.top
     - navigation.instant
     - navigation.tracking
+#    - navigation.sections
+#    - navigation.collapse
     - navigation.footer
     - content.code.copy
     - content.action.edit
@@ -28,42 +31,18 @@ exclude_docs: |
   _plantillas/
 
 nav:
-  - Inicio: index.md
-  - Unidades:
-      - 1. Ser Ing. en el s.XXI:
-          - Introducción: unidad/1/readme.md
-          - Syllabus, presentación del curso: unidad/1/curso/readme.md
-          - Rol profesional, trayectorias y impacto ético/social: unidad/1/rol/readme.md
+  - "Inicio": "index.md"
 
-      - 2. Orígenes y fundamentos:
-          - Introducción: unidad/2/readme.md
-          - Orígenes históricos: unidad/2/origenes/readme.md
-          - Sistemas de numeración: unidad/2/sist_numeracion/readme.md
-          - Hardware: unidad/2/hardware/readme.md
+  - "Unidades":
 
-      - 3. Sistemas y herramientas:
-          - Introducción: unidad/3/readme.md
-          - Shell y Bash: comandos, paths y scripts básicos: unidad/3/shell/readme.md
-          - Git y Markdown: control de versiones y documentación técnica: unidad/3/git/readme.md
-          - Excel: limpieza de datos, fórmulas y tablas: unidad/3/exel/readme.md
-          - LaTeX: estructura básica de informes académicos: unidad/3/latex/readme.md
+      - "1. Ser Ing. en el s.XXI": "unidad/1/readme.md"
+      - "2. Orígenes y fundamentos": "unidad/2/readme.md"
+      - "3. Sistemas y herramientas": "unidad/3/readme.md"
+      - "4. Estructuras y procesos": "unidad/4/readme.md"
+      - "5. Alfabetización en IA": "unidad/5/readme.md"
+      - "6. Soluciones y trayectorias": "unidad/6/readme.md"
 
-      - 4. Estructuras y procesos:
-          - Introducción: unidad/4/readme.md
-          - Estructuras de datos: unidad/4/estructuras/readme.md
-          - Condición de carrera y concurrencia, Problemas clásicos de sincronización: unidad/4/condicion/readme.md
-
-      - 5. Alfabetización en IA:
-          - Introducción: unidad/5/readme.md
-          - Introducción a IA y Machine Learning: unidad/5/ia/readme.md
-          - IA Generativa: unidad/5/redes/readme.md
-
-      - 6. Soluciones y trayectorias:
-          - Introducción: unidad/6/readme.md
-          - Análisis de una app: unidad/6/app/readme.md
-          - Roles en la industria: unidad/6/roles/readme.md
-
-  - Acerca de: acerca_de.md
+  - "Acerca de": "acerca_de.md"
 
 markdown_extensions:
   - pymdownx.superfences

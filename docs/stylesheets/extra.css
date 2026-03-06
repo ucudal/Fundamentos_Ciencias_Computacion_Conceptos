@@ -1,3 +1,8 @@
 :root  > * {
   --md-primary-fg-color:        #143361;
 }
+
+.md-nav__icon {
+  display: none;
+}
+
