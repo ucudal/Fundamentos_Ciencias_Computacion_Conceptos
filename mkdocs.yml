@@ -1,19 +1,38 @@
 site_name: Fundamentos en Ciencias de la Computación
+site_url: https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/
+
+repo_url: https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Conceptos
+repo_name: ucudal/Fundamentos_Ciencias_Computacion_Conceptos
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   logo: images/logo.png
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
+    - search.highlight
+    - search.suggest
+
 extra_css:
   - stylesheets/extra.css
+
 exclude_docs: |
   _plantillas/
+
 nav:
   - Inicio: index.md
   - Unidades:
-    - 1. Ser Ing. en el s.XXI: unidad/1/readme.md
-    - 2. Orígenes y fundamentos: unidad/2/readme.md
-    - 3. Sistemas y herramientas: unidad/3/readme.md
-    - 4. Estructuras y procesos: unidad/4/readme.md
-    - 5. Alfabetización en IA: unidad/5/readme.md
-    - 6. Soluciones y trayectorias: unidad/6/readme.md
+      - 1. Ser Ing. en el s.XXI: unidad/1/readme.md
+      - 2. Orígenes y fundamentos: unidad/2/readme.md
+      - 3. Sistemas y herramientas: unidad/3/readme.md
+      - 4. Estructuras y procesos: unidad/4/readme.md
+      - 5. Alfabetización en IA: unidad/5/readme.md
+      - 6. Soluciones y trayectorias: unidad/6/readme.md
   - Acerca de: acerca_de.md
-
