@@ -1,4 +1,4 @@
-status: DRAFT
+status: REVIEW
 responsable: @pilasguru
 ultima_actualizacion: 2026-03-06
 
@@ -34,12 +34,12 @@ ultima_actualizacion: 2026-03-06
 
 | Apellido, Nombre | Correo electrónico |
 |------------------|-------------------|
-| Abadie, José | jose.abadie@ucu.edu.uy |
-| Caffa, Angel | angel.caffa@ucu.edu.uy | 
-| Pilas, Rodolfo | rodolfo.pilas@ucu.edu.uy |
-| Varela, Pablo |  pablo.varela@ucu.edu.uy |
-| Viera, Joaquin | joaquin.vieram @ucu.edu.uy |
-| Wagner, Federico | federico.wagner@ucu.edu.uy |
+| Abadie, José | [jose.abadie@ucu.edu.uy](mailto:jose.abadie@ucu.edu.uy) |
+| Caffa, Angel | [angel.caffa@ucu.edu.uy](mailto:angel.caffa@ucu.edu.uy) | 
+| Pilas, Rodolfo | [rodolfo.pilas@ucu.edu.uy](mailto:rodolfo.pilas@ucu.edu.uy) |
+| Varela, Pablo |  [pablo.varela@ucu.edu.uy](mailto:pablo.varela@ucu.edu.uy) |
+| Viera, Joaquin | [joaquin.vieram@ucu.edu.uy](mailto:joaquin.vieram@ucu.edu.uy) |
+| Wagner, Federico | [federico.wagner@ucu.edu.uy](mailto:federico.wagner@ucu.edu.uy) |
 
 ### 1.3.  Resumen
 
