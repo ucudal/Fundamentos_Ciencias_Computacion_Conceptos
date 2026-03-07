@@ -4,33 +4,33 @@
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| curso | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| rol | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| curso | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-06 |
+| rol | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-07 |
 
 ### 2. Orígenes y fundamentos
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | hardware | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| origenes | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | sist_numeracion | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| origenes | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 
 ### 3. Sistemas y herramientas
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
+| shell | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
+| latex | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
 | excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | git | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| latex | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
-| shell | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
 
 ### 4. Estructuras y procesos
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 | estructuras | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 | ia | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 
 ### 5. Alfabetización en IA
 

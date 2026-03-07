@@ -13,6 +13,16 @@ STATUS_BADGES = {
     "COMPLETE": "![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen)",
 }
 
+class IgnorePythonLoader(yaml.SafeLoader):
+    pass
+
+def ignore_python(loader, tag_suffix, node):
+    return None
+
+IgnorePythonLoader.add_multi_constructor(
+    "tag:yaml.org,2002:python/",
+    ignore_python
+)
 
 def badge_global(porcentaje):
     if porcentaje < 30:
@@ -35,20 +45,31 @@ def github_link(responsable):
     return responsable
 
 
+def sort_key_subunidad(nombre):
+    """
+    Ordena correctamente 1.1, 1.2, 1.10
+    """
+    partes = nombre.split(".")
+    return tuple(int(p) for p in partes if p.isdigit())
+
+
 # -----------------------------
 # Leer mkdocs.yml
 # -----------------------------
-with open(MKDOCS_FILE) as f:
-    config = yaml.safe_load(f)
+with open(MKDOCS_FILE, encoding="utf-8") as f:
+    config = yaml.load(f, Loader=IgnorePythonLoader)
 
 unidad_titulos = {}
 
 for item in config.get("nav", []):
     if isinstance(item, dict) and "Unidades" in item:
+
         for unidad in item["Unidades"]:
-            for titulo, ruta in unidad.items():
-                numero = ruta.split("/")[1]
-                unidad_titulos[numero] = titulo
+
+            if isinstance(unidad, dict):
+                for titulo, ruta in unidad.items():
+                    numero = ruta.split("/")[1]
+                    unidad_titulos[numero] = titulo
 
 
 # -----------------------------
@@ -58,24 +79,32 @@ agrupado = {}
 contador_estados = Counter()
 total_items = 0
 
+faltantes = []
+
 for path in Path("docs/unidad").glob("*/*/readme.md"):
 
     unidad = path.parts[2]
     subunidad = path.parts[3]
 
-    lines = path.read_text().splitlines()
+    lines = path.read_text(encoding="utf-8").splitlines()
 
     status = ""
     responsable = ""
     fecha = ""
 
-    for line in lines[:5]:
+    for line in lines[:10]:
+
         if line.startswith("status:"):
             status = line.split(":", 1)[1].strip()
+
         elif line.startswith("responsable:"):
             responsable = line.split(":", 1)[1].strip()
+
         elif line.startswith("ultima_actualizacion:"):
             fecha = line.split(":", 1)[1].strip()
+
+    if not status or not responsable or not fecha:
+        faltantes.append(str(path))
 
     if not status:
         continue
@@ -111,7 +140,9 @@ for unidad in sorted(agrupado.keys(), key=int):
     salida += "| Sub-unidad | Status | Responsable | Última actualización |\n"
     salida += "|------------|--------|-------------|----------------------|\n"
 
-    for subunidad, status, responsable, fecha in sorted(agrupado[unidad]):
+    for subunidad, status, responsable, fecha in sorted(
+        agrupado[unidad], key=lambda x: sort_key_subunidad(x[0])
+    ):
 
         badge_status = STATUS_BADGES.get(status, status)
         responsable_md = github_link(responsable)
@@ -120,7 +151,7 @@ for unidad in sorted(agrupado.keys(), key=int):
 
     salida += "\n"
 
-Path(OUTPUT_FILE).write_text(salida)
+Path(OUTPUT_FILE).write_text(salida, encoding="utf-8")
 
 print(f"✔ Tabla generada en {OUTPUT_FILE}")
 
@@ -129,7 +160,7 @@ print(f"✔ Tabla generada en {OUTPUT_FILE}")
 # Insertar en README
 # -----------------------------
 readme_path = Path("README.md")
-readme = readme_path.read_text()
+readme = readme_path.read_text(encoding="utf-8")
 
 inicio = "<!-- ESTADO_EDITORIAL_START -->"
 fin = "<!-- ESTADO_EDITORIAL_END -->"
@@ -162,6 +193,21 @@ readme = re.sub(
     flags=re.DOTALL
 )
 
-readme_path.write_text(readme)
+readme_path.write_text(readme, encoding="utf-8")
 
 print("✔ README actualizado")
+
+
+# -----------------------------
+# Reporte editorial
+# -----------------------------
+if faltantes:
+
+    print("\n⚠ Archivos con metadata incompleta:\n")
+
+    for f in faltantes:
+        print(" -", f)
+
+else:
+
+    print("\n✔ Toda la metadata editorial está completa")
