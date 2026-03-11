@@ -138,20 +138,20 @@ En sus notas, Ada puntualizó la diferencia entre la máquina analítica y las m
 El uso de la electricidad prometía mejorar notablemente el rendimiento de las máquinas.
 
 La **Z3** fue la primer computadora electromecánica (a base de relés) en ser construida.
+<img width="679" height="485" alt="image" src="https://github.com/user-attachments/assets/bc4091aa-978b-4a8b-b012-fe557e4bad2c" />
 
-![Z3](imagenes-hardware/figura_14.jpeg)
 
 📚 **Referencia:** [Wikipedia - Z3](https://es.wikipedia.org/wiki/Z3)
 
 ### ENIAC (1945)
 
 **Electronic Numerical Integrator And Computer (ENIAC)** fue la primer computadora electrónica.
+<img width="532" height="409" alt="image" src="https://github.com/user-attachments/assets/01b1c6be-9bf4-404d-9f0c-3473ed51a11a" />
 
 Se basan en el uso de "válvulas electrónicas" o "tubos de vacío".
 
 Una de sus prestaciones era el cálculo de la trayectoria de proyectiles.
 
-![ENIAC](imagenes-hardware/figura_15.jpeg)
 
 📚 **Referencia:** [Wikipedia - ENIAC](https://es.wikipedia.org/wiki/ENIAC)
 
