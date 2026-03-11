@@ -138,7 +138,7 @@ En sus notas, Ada puntualizó la diferencia entre la máquina analítica y las m
 El uso de la electricidad prometía mejorar notablemente el rendimiento de las máquinas.
 
 La **Z3** fue la primer computadora electromecánica (a base de relés) en ser construida.
-<img width="679" height="485" alt="image" src="https://github.com/user-attachments/assets/bc4091aa-978b-4a8b-b012-fe557e4bad2c" />
+<<img width="762" height="579" alt="image" src="https://github.com/user-attachments/assets/24bcf2d8-4abc-4687-9e20-a6c4a4529aff" />
 
 
 📚 **Referencia:** [Wikipedia - Z3](https://es.wikipedia.org/wiki/Z3)
@@ -164,7 +164,7 @@ Una de sus prestaciones era el cálculo de la trayectoria de proyectiles.
 - Electrónica basada en válvulas de vacío
 
 **Ejemplos:** EDSAC, EDVAC
-<img width="718" height="518" alt="image" src="https://github.com/user-attachments/assets/14330ba7-d53e-4604-8440-d41b95289957" />
+<img width="773" height="586" alt="image" src="https://github.com/user-attachments/assets/d55b516f-4757-4c1a-a630-366ea2476ccb" />
 <img width="536" height="440" alt="image" src="https://github.com/user-attachments/assets/750ba566-2c7d-437f-aaa5-e719e301838c" />
 <img width="864" height="619" alt="image" src="https://github.com/user-attachments/assets/c20a1771-1756-4e63-9c78-0528705f1209" />
 
@@ -176,7 +176,7 @@ La introducción de la electrónica basada en **transistores** permitió el surg
 
 **Ejemplos:** DEC PDP-1, IBM 1401
 <img width="249" height="407" alt="image" src="https://github.com/user-attachments/assets/60bccea2-2a3d-4fd1-8344-b899ca0cf64c" />
-<img width="460" height="317" alt="image" src="https://github.com/user-attachments/assets/c29103b9-883b-4cce-befa-249c7e245ba2" />
+<img width="537" height="368" alt="image" src="https://github.com/user-attachments/assets/05d18d2f-77d7-4ce7-9cf5-5adb58c54413" />
 
 
 ---
