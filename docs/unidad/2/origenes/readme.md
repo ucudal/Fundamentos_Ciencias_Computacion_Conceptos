@@ -202,8 +202,3 @@ Aparición del PC tal como lo conocemos hoy día.
 <img width="433" height="331" alt="image" src="https://github.com/user-attachments/assets/094f547d-36c9-4843-aa1e-1417cebb9e8c" />
 <img width="376" height="399" alt="image" src="https://github.com/user-attachments/assets/269eaeee-129e-4113-81fb-33654cff12bc" />
 <img width="408" height="341" alt="image" src="https://github.com/user-attachments/assets/8c79e81f-dcbc-4130-aa6c-281f7138c772" />
-
-
-**Documento creado a partir del PDF "El Hardware y el Software"**
-
-*Conversión realizada con extracción de imágenes y formato mejorado*
