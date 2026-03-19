@@ -46,6 +46,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 ✔ Tabla generada correctamente.
 ```
 
+
 <!-- ESTADO_EDITORIAL_START -->
 
 ![Progreso](https://img.shields.io/badge/progreso-12%25-red)
@@ -54,9 +55,9 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 ### Estado editorial sub-secciones
 
-- DRAFT: 8
+- DRAFT: 6
 - IN_PROGRESS: 4
-- REVIEW: 2
+- REVIEW: 4
 - COMPLETE: 2
 
 ---
@@ -75,8 +76,8 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | hardware | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| sist_numeracion | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| origenes | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| sist_numeracion | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
+| origenes | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
 
 ### 3. Sistemas y herramientas
 
@@ -112,6 +113,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
 
 
 

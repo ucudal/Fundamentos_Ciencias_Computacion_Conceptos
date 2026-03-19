@@ -1,3 +1,7 @@
+status: REVIEW
+responsable: @pilasguru
+ultima_actualizacion: 2026-03-19
+
 # El Hardware y el Software
 
 ---
