@@ -182,9 +182,9 @@ if ($args[0] -eq "hola") {
 }
 ```
 
-También existen estructuras como `for` y `while`, que permiten iterar sobre datos o repetir acciones.
+También existen estructuras de programación como `for` y `while`, que permiten iterar sobre datos o repetir acciones.
 
-Estas estructuras son esenciales para pasar de simples comandos a lógica más elaborada.
+Estas estructuras de programación son esenciales para pasar de simples comandos a lógica más elaborada.
 
 ## Expresiones regulares
 
