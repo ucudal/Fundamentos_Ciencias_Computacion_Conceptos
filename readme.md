@@ -47,6 +47,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 ```
 
 
+
 <!-- ESTADO_EDITORIAL_START -->
 
 ![Progreso](https://img.shields.io/badge/progreso-12%25-red)
@@ -56,8 +57,8 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 ### Estado editorial sub-secciones
 
 - DRAFT: 6
-- IN_PROGRESS: 4
-- REVIEW: 4
+- IN_PROGRESS: 3
+- REVIEW: 5
 - COMPLETE: 2
 
 ---
@@ -83,7 +84,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| shell | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
+| shell | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
 | latex | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
 | excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | git | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
@@ -113,6 +114,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
 
 
 

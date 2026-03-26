@@ -19,7 +19,7 @@
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| shell | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
+| shell | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
 | latex | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
 | excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | git | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
