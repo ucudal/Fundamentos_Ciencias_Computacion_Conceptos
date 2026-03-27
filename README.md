@@ -7,20 +7,20 @@
 </div>
 
 # Universidad Católica del Uruguay
-
 ## Facultad de Ingeniería y Tecnologías
-
 ### Fundamentos en Ciencias de la Computación
 
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-En este repositorio definimos y presentamos contenidos útiles para los cursos de Fundamentos en Ciencias de la Computación.
+Este repositorio reúne el material conceptual y de lectura de la asignatura **Fundamentos en Ciencias de la Computación**, correspondiente a las carreras **Ingeniería en Informática** e **Ingeniería en Inteligencia Artificial y Ciencia de Datos**.
 
-> **🚀 ¡Visita este documento on-line!**
+> **Acceso en línea**
 >
-> [Fundamentos en Ciencias de la Computación](https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/)
+> Material del curso: [Fundamentos en Ciencias de la Computación](https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/)
 
-O continúa leyendo en [este mismo repositorio](docs/index.md)
+Como complemento visual del curso, las presentaciones utilizadas en clase se publican en el repositorio:
+
+[Fundamentos_Ciencias_Computacion_Presentaciones](https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones)
 
 ---
 
