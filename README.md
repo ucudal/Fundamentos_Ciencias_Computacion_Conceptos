@@ -17,10 +17,12 @@ Este repositorio reúne el material conceptual y de lectura de la asignatura **F
 > **Acceso en línea**
 >
 > Material del curso: [Fundamentos en Ciencias de la Computación](https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Conceptos/)
+> 
+> Presentaciones de clase: [Presentaciones Fundamentos en Ciencias de la Computación](https://ucudal.github.io/Fundamentos_Ciencias_Computacion_Presentaciones/)
 
-Como complemento visual del curso, las presentaciones utilizadas en clase se publican en el repositorio:
+Repositorio del las presentaciones de clase: 
 
-[Fundamentos_Ciencias_Computacion_Presentaciones](https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones)
+- [Fundamentos_Ciencias_Computacion_Presentaciones](https://github.com/ucudal/Fundamentos_Ciencias_Computacion_Presentaciones)
 
 ---
 
