@@ -4,23 +4,23 @@
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| curso | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-06 |
-| rol | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-07 |
+| curso | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-03-06 |
+| rol | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-03-07 |
 
 ### 2. Orígenes y fundamentos
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | hardware | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| sist_numeracion | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
-| origenes | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
+| sist_numeracion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
+| origenes | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-03-19 |
 
 ### 3. Sistemas y herramientas
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| shell | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
-| latex | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@pilasguru](https://github.com/pilasguru) | 2025-11-20 |
+| shell | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
+| latex | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-04-06 |
 | excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | git | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 
