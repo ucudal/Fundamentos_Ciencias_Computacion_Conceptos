@@ -28,10 +28,6 @@ Unir todo lo anterior y generar el resultado.
 
 Centrarse en el contenido y entregar un resultado que sigue la Guía de Estilos del organismo, la institución o el proyecto.
 
-## [Recursos y práctica guiada](./7_Recursos.md)
-
-Seguir aprendiendo LaTeX.
-
 ## Bibliografía
 
 *  LaTeX Wikibook – [https://en.wikibooks.org/wiki/LaTeX](https://en.wikibooks.org/wiki/LaTeX)

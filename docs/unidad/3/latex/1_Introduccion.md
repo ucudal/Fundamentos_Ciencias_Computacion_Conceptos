@@ -2,43 +2,63 @@
 
 ## ¿Qué es LaTeX?
 
-LaTeX (pronunciado “LÉI-tex” o “LÁ-teJ” o "LÁ-tex") es una herramienta para la composición tipográfica de documentos con apariencia profesional. Sin embargo, su funcionamiento es bastante diferente al de otras aplicaciones de creación de documentos que quizás haya utilizado, como Microsoft Word o LibreOffice Writer: estas herramientas WYSIWYG proporcionan a los usuarios una página interactiva donde escriben, editan y aplican diversos estilos. LaTeX funciona de forma muy distinta: en lugar de eso, su documento es un archivo de texto plano con comandos LaTeX intercalados para expresar los resultados deseados. Para generar un documento legible y maquetado, su archivo LaTeX se procesa mediante un software llamado motor TeX, que utiliza los comandos incrustados en su archivo de texto para guiar y controlar el proceso de composición, convirtiendo los comandos LaTeX y el texto del documento en un archivo PDF con formato profesional. Esto significa que solo necesitas concentrarte en el contenido de tu documento y la computadora, mediante los comandos de LaTeX y el motor TeX, se encargará del formato.
+LaTeX (pronunciado “LÉI-tex”, “LÁ-tej” o “LÁ-tex”) es un sistema para la composición tipográfica de documentos con calidad profesional, ampliamente utilizado en contextos académicos, científicos y técnicos.
+
+A diferencia de herramientas tradicionales como procesadores de texto tipo WYSIWYG (por ejemplo, Microsoft Word o LibreOffice Writer), donde el usuario edita directamente el aspecto visual del documento, LaTeX funciona como un lenguaje de marcado. El documento se escribe como texto plano, incorporando comandos que describen la estructura y el significado del contenido.
+
+Este archivo `.tex` no es el resultado final. Para obtener un documento legible, se procesa mediante un motor de composición (TeX), que interpreta los comandos y genera una salida formateada.
+
+Tradicionalmente, este proceso generaba archivos en formato DVI (Device Independent), que luego podían convertirse a PostScript (PS) o PDF. En la práctica actual, los motores modernos como `pdflatex`, `xelatex` o `lualatex` generan directamente documentos PDF.
+
+Sin embargo, el ecosistema de LaTeX permite múltiples tipos de salida:
+
+* **PDF**: el formato más común para informes, artículos y tesis
+* **PostScript (PS)**: utilizado históricamente en impresión profesional
+* **DVI**: formato intermedio, hoy en gran medida obsoleto
+* **HTML**: mediante herramientas como `latex2html`, `htlatex` o `pandoc`
+* **Markdown / otros formatos**: usando conversores como `pandoc`
+
+Esto implica que un mismo contenido fuente puede reutilizarse para distintos medios: impresión, web o distribución digital.
 
 ## ¿Por qué aprender LaTeX?
 
-Existen diversos argumentos a favor y en contra de aprender a usar LaTeX en lugar de otras aplicaciones de creación de documentos; pero, en última instancia, es una decisión personal basada en preferencias, afinidades y requisitos de documentación.
+El uso de LaTeX no es universal ni obligatorio. Existen contextos donde otras herramientas pueden resultar más adecuadas. Sin embargo, en el ámbito de la ingeniería, la ciencia y la documentación técnica, LaTeX ofrece ventajas claras.
 
-Entre los argumentos a favor de LaTeX se incluyen:
+Una de sus principales fortalezas es la capacidad para representar contenido matemático con precisión y calidad tipográfica superior. Esto lo convierte en una herramienta estándar en disciplinas como matemática, física, informática e ingeniería.
 
-* Compatibilidad con la composición tipográfica de fórmulas matemáticas extremadamente complejas, tablas y contenido técnico para las ciencias físicas;
-* Facilidad para añadir notas al pie, referencias cruzadas y gestionar bibliografías;
-* Facilidad para crear elementos de documento complejos o tediosos, como índices, glosarios, tablas de contenido y listas de figuras;
-* Alta capacidad de personalización para la creación de documentos a medida gracias a su programabilidad intrínseca y su extensibilidad mediante miles de paquetes de complementos gratuitos. 
+Además, facilita la gestión de estructuras complejas dentro de un documento. Elementos como referencias cruzadas, notas al pie, bibliografía, índices o tablas de contenido pueden generarse y mantenerse automáticamente, reduciendo errores y esfuerzo manual.
 
-En general, LaTeX ofrece a los usuarios un gran control sobre la producción de documentos con una tipografía de altísima calidad. Por supuesto, hay tipos de documentos o publicaciones donde LaTeX no destaca, como muchos diseños de página de formato libre típicos de las revistas.
+Otro aspecto relevante es su extensibilidad. LaTeX cuenta con miles de paquetes que permiten ampliar sus funcionalidades, adaptándolo a distintos tipos de documentos y necesidades específicas.
 
-Una ventaja importante de LaTeX es la separación del contenido y el estilo del documento: una vez escrito el contenido, su apariencia se puede modificar fácilmente. Del mismo modo, se puede crear un archivo LaTeX que defina el diseño y el estilo de un tipo de documento específico, y este archivo se puede usar como plantilla para estandarizar la autoría y la producción de otros documentos del mismo tipo. Por ejemplo, esto permite a las editoriales científicas crear plantillas de artículos en LaTeX que los autores utilizan para redactar sus trabajos para su publicación en revistas. Overleaf cuenta con una galería con miles de plantillas que abarcan una enorme variedad de tipos de documentos: desde artículos científicos, informes y libros hasta currículos y presentaciones. Dado que estas plantillas definen el diseño y el estilo del documento, los autores solo tienen que abrirlas en Overleaf —creando un nuevo proyecto— y empezar a escribir para añadir su contenido.
+En términos prácticos, LaTeX no se limita a producir informes. Existen clases y plantillas específicas para distintos tipos de documentos:
 
-Fuente: [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX?)
+* **Artículos científicos** (`article`, `IEEEtran`, `elsarticle`)
+* **Informes y tesis** (`report`, `book`, clases institucionales)
+* **Presentaciones** mediante la clase `beamer`
+* **Currículums vitae** con clases como `moderncv` o `awesome-cv`
+* **Cartas formales** (`letter`)
+* **Posters académicos** (`beamerposter`)
 
-## Apuntes
+Esto permite utilizar una misma herramienta para múltiples necesidades de documentación profesional.
 
-### Objetivo: despertar interés.
+Una ventaja clave es la separación entre contenido y estilo. El autor escribe el contenido sin preocuparse por el formato final, que puede modificarse posteriormente sin alterar el texto. Esto facilita la reutilización y adaptación a normas institucionales.
 
-* Mostrar una diapositiva con un texto en Word y el mismo en LaTeX (en PDF final).
-* Explicar que LaTeX es un lenguaje de marcado para escribir documentos científicos, tesis e informes técnicos.
-* Breve historia: Knuth → TeX → LaTeX.
+En este contexto, es habitual el uso de plantillas. Universidades, revistas científicas y organizaciones proporcionan estilos predefinidos en LaTeX que aseguran consistencia y cumplimiento de estándares.
 
-### Beneficios:
+Herramientas como Overleaf simplifican este flujo al ofrecer edición en línea y acceso a una amplia biblioteca de plantillas listas para usar.
 
-* Profesionalismo automático (márgenes, tipografía, numeración).
-* Reproducibilidad (versionado con Git).
-* Ideal para matemáticas, bibliografía, figuras.
-* Mencionar entornos online como Overleaf para empezar sin instalar nada.
+## ¿Cuándo usar LaTeX?
 
-### Demo corta
+LaTeX es especialmente adecuado cuando el documento:
 
-abrir Overleaf, crear un documento “Blank Project” y mostrar el resultado.
+* contiene fórmulas matemáticas o notación técnica compleja
+* requiere referencias cruzadas o bibliografía formal
+* debe cumplir con un formato académico o institucional estricto
+* necesita consistencia tipográfica en documentos largos
+* puede requerir múltiples formatos de salida a partir de una misma fuente
 
+En cambio, puede no ser la mejor opción en documentos de diseño libre, como materiales gráficos altamente personalizados o publicaciones con maquetación no estructurada.
+
+* Referencia: [Learn LaTeX in 30 minutes](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#What_is_LaTeX?)
 
 [🔙 Inicio de la unidad](../readme.md)

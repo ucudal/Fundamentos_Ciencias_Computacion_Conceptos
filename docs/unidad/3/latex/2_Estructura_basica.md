@@ -1,17 +1,17 @@
 # Estructura básica de un documento
 
-### Entender la anatomía de un archivo .tex.
+Un documento en LaTeX es un archivo de texto plano con extensión `.tex`. Su estructura sigue una organización bien definida que separa el preámbulo del contenido.
 
-Mostrar y explicar:
+Un ejemplo mínimo es el siguiente:
 
-```latex
+```
 \documentclass{article}
 
+\usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
 
-\title{Mi Primer Informe en LaTeX}
-\author{Nombre del Estudiante}
+\title{Mi primer documento}
+\author{Autor}
 \date{\today}
 
 \begin{document}
@@ -19,16 +19,25 @@ Mostrar y explicar:
 \maketitle
 
 \section{Introducción}
-Texto de ejemplo.
+
+Este es un documento básico en LaTeX.
 
 \end{document}
 ```
 
-### Explicar:
+## Anatomía de un archivo .tex
 
-* `\documentclass{}` define el tipo (article, report, beamer…)
-* `\usepackage{}` añade funcionalidades.
-* Todo va entre `\begin{document}` y `\end{document}`.
-* Compilar = convertir el código a PDF / html / Postscript
+Comprender la anatomía de un documento es fundamental para trabajar con LaTeX de forma efectiva. En términos generales, se distinguen tres partes:
+
+El **preámbulo**, donde se define la configuración global del documento, incluyendo idioma, codificación, paquetes y metadatos.
+
+El inicio del documento, marcado por `\begin{document}`, donde comienza el contenido visible.
+
+El **cuerpo del documento**, donde se organizan los distintos elementos: secciones, texto, figuras, tablas y ecuaciones.
+
+Finalmente, el documento se cierra con \end{document}.
+
+Este modelo estructurado permite que el documento sea fácilmente mantenible y escalable.
+
 
 [🔙 Inicio de la unidad](../readme.md)
