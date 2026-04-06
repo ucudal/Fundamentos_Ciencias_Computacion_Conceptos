@@ -1,5 +1,5 @@
 status: REVIEW
-responsable: @pilasguru
+responsable: @JoacoViera
 ultima_actualizacion: 2026-04-05
 
 # Unidad 3: Git - Control de versiones
