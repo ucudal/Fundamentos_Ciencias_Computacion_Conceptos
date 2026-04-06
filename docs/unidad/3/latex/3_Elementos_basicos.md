@@ -5,7 +5,7 @@
 La organización del contenido se realiza mediante comandos estructurales:
 
 ```latex
-\sectino{Título de sección}
+\section{Título de sección}
 \subsection{Subsección}
 \subsubsection{Nivel inferior}
 ```

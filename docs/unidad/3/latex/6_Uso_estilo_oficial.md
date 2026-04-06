@@ -35,39 +35,84 @@ Esto permite:
 * mantenimiento centralizado del formato
 * adaptación rápida a distintos estándares
 
-## Ejemplo con cambio visual significativo
+## Ejemplo con cambio a un estilo UCUDAL
 
 Supongamos que una institución define un estilo `ucudal.sty` más completo:
 
 ```latex
 % ucudal.sty
 
-\usepackage[a4paper, margin=2.5cm]{geometry}
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ucudal}[2026/04/06 Estilo de ejemplo UCUDAL]
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{setspace}
+\usepackage{xcolor}
 
 % Interlineado
 \onehalfspacing
 
+% Sin sangría, con separación entre párrafos
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8em}
+
+% Color institucional simple
+\definecolor{ucudalblue}{RGB}{0,70,140}
+
 % Encabezado y pie
 \pagestyle{fancy}
-\fancyhead[L]{UCUDAL}
-\fancyhead[R]{Informe Académico}
+\fancyhf{}
+\fancyhead[L]{\textsc{Universidad Católica del Uruguay}}
+\fancyhead[R]{\textsc{Informe Académico}}
 \fancyfoot[C]{\thepage}
 
-% Formato de títulos
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Hacer que también la primera página use fancy
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\textsc{Universidad Católica del Uruguay}}
+  \fancyhead[R]{\textsc{Informe Académico}}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0.6pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+}
+
+% Formato de secciones
 \titleformat{\section}
-  {\large\bfseries}
+  {\Large\bfseries\color{ucudalblue}}
   {\thesection.}{1em}{}
 
 \titleformat{\subsection}
-  {\normalsize\bfseries}
+  {\large\bfseries\color{ucudalblue}}
   {\thesubsection.}{1em}{}
+
+% Espaciado de títulos
+\titlespacing*{\section}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsection}{0pt}{1.2em}{0.5em}
+
+% Título del documento más visible
+\makeatletter
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\Huge\bfseries\color{ucudalblue}\@title \par}
+    \vspace{1em}
+    {\large \@author \par}
+    \vspace{0.5em}
+    {\normalsize \@date \par}
+    \vspace{1.5em}
+    \hrule
+    \vspace{2em}
+  \end{center}
+}
+\makeatother
 ```
 
-Ahora, el documento del estudiante no necesita preocuparse por nada de eso:
+Ahora, el documento no necesita preocuparse por nada de eso, solo usar el paquete de estilo:
 
 ```latex
 \documentclass{article}
@@ -88,6 +133,12 @@ Este informe fue elaborado siguiendo el estilo oficial de UCUDAL.
 \section{Desarrollo}
 El contenido se escribe sin preocuparse por el formato.
 
+\subsection{Ventajas}
+La separación entre contenido y estilo permite reutilizar el mismo texto con distintas presentaciones.
+
+\subsection{Aplicación}
+Este enfoque es habitual en informes académicos, tesis y artículos científicos.
+
 \section{Conclusión}
 El estilo se aplica automáticamente.
 
@@ -98,10 +149,13 @@ El estilo se aplica automáticamente.
 
 Al incorporar el estilo:
 
-* se modifican márgenes y espaciado
-* aparece encabezado institucional
-* los títulos cambian de formato
-* el documento adquiere consistencia visual
+* encabezado en la primera página
+* pie de página con numeración
+* título grande y reformateado
+* secciones en color y con otra jerarquía visual
+* más espacio entre párrafos
+* interlineado más amplio
+* documento con aspecto institucional
 
 Y lo más importante:
 
