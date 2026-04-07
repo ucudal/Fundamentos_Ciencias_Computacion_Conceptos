@@ -22,7 +22,7 @@
 | shell | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
 | latex | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-04-06 |
 | excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| git | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| git | ![REVIEW](https://img.shields.io/badge/status-REVIEW-orange) | [@JoacoViera](https://github.com/JoacoViera) | 2026-04-05 |
 
 ### 4. Estructuras y procesos
 
