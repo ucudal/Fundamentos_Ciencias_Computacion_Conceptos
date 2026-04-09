@@ -1,4 +1,4 @@
-status: REVIEW
+status: COMPLETE
 responsable: @JoacoViera
 ultima_actualizacion: 2026-04-05
 
