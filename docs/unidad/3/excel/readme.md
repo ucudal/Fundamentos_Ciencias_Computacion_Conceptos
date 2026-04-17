@@ -15,7 +15,7 @@ FILAS: Son las divisiones horizontales de la plantilla. Se identifican mediante 
 
 COLUMNAS: Son las divisiones verticales de la plantilla. Se identifican mediante letras (A, B, C, ...).
 
-La intersección entre una fila y una columna nos da una celda. La combinación entre el identificador de la fila y la columna nos da el identificador de la celda. Ejemplo: columna A y fila 1, se obtiene la celda con identificador A1. (Conocer el identificador de la celda será necesario para luego referirnos a la misma al momento de realizar distintas operaciones).
+La intersección entre una fila y una columna nos da una celda. La combinación entre el identificador de la fila y la columna nos da el identificador de la celda. Ejemplo: columna A y fila 1, se obtiene la celda con identificador A1. (Saber el identificador de la celda es necesario para referirnos a la misma al momento de realizar distintas operaciones).
 
 Si bien esta es la forma por defecto de establecer el identificador de una celda, también es posible darle un "alias" a la celda, establecido por el usuario.
 
@@ -31,7 +31,33 @@ Si bien esta es la forma por defecto de establecer el identificador de una celda
 
 ## Limpieza de datos
 
-:: TODO
+Es el proceso de preparar la información para poder trabajar con ella de forma correcta. Es común que los datos tengan problemas como espacios innecesarios, errores de escritura o formatos incorrectos, y estos programas ofrecen herramientas para corregirlos.
+
+> ¿Qué es un dato?
+Un dato es un valor que se guarda en una celda. Puede ser Texto, Números, Fechas, etc. 
+
+Los datos no siempre se van a encontrar de una forma en la cual se puedan trabajar, por lo cual se realiza un proceso de limpieza antes de utilizarlos.  
+
+Algunas acciones comunes son:
+
+- Eliminar espacios innecesarios.
+- Unificar formatos.
+- Eliminar datos duplicados.
+- Completar datos faltantes.
+
+### Autocompletar datos:
+
+Es la función de completar datos automáticamente a partir de un patrón o secuencia.
+
+Ejemplo si tenemos una secuencia:
+
+- 1,2,3
+
+Podemos seleccionar esas celdas y arrastrar desde la esquina inferior derecha para que la serie continúe automáticamente:
+
+- 4,5,6
+
+Esta funcionalidad también es aplicable a otros tipos de datos como: Días, Meses, Fechas
 
 ## Fórmulas y Funciones
 
@@ -58,7 +84,7 @@ Es importante destacar que para que una función retorne un resultado y este se 
 
 Ejemplo:
 
--`=SUMA(6;7)` (En donde = indica que la expresión es una fórmula y dentro de la fórmula se invoca la función SUMA con los parámetros 6 y 7)
+-`=SUMA(6;7)` (En donde = indica que la expresión es una fórmula y dentro de la fórmula se invoca la función SUMA con los parámetros 6 y 7). Es lo mismo a escribir `=6+7`.
 
 
 ## Tablas
@@ -94,7 +120,7 @@ Para crear una tabla se debe:
 
 ## Buscar
 
-Es una función que permite encontrar un valor dentro de un conjunto de datos y devolver un resultado relacionado.
+Es una función que permite encontrar un valor dentro de un conjunto de datos.
 
 Se utiliza cuando se desea localizar información dentro de una fila o columna de forma automática.
 
@@ -122,13 +148,11 @@ Si queremos obtener el precio del código 2:
 
 Retorna 200
 
-## Tablas dinámicas:
-
-Una tabla dinámica es una herramienta de Excel que permite resumir, analizar y explorar grandes volúmenes de datos de forma interactiva, sin modificar los datos originales.
+Existen variantes más utilizadas como BUSCARV y BUSCARX.
 
 ## Referencia de celdas:
 
-Las referencias permiten utilizar el valor de una celda dentro de otra, principalmente en la construcción de fórmulas. En lugar de trabajar con valores fijos, se trabaja con direcciones de celdas, lo que permite que los resultados se actualicen automáticamente cuando cambian los datos.
+Las referencias permiten utilizar el valor de una celda dentro de otra, principalmente en las fórmulas. En lugar de trabajar con valores fijos, se trabaja con direcciones de celdas, lo que permite que los resultados se actualicen automáticamente cuando cambian los datos.
 
 Para referenciar una celda basta con agregar en la celda a referir la siguiente sintaxis `=REFERENCIA_CELDA`; en caso de hacerlo dentro de una fórmula, basta con agregar solo la referencia. Ejemplo: `=REFERENCIA_CELDA_A +REFERENCIA_CELDA_B`
 
@@ -163,7 +187,29 @@ Ejemplos:
 
 Esto es útil cuando se copian fórmulas y se desea que ciertas referencias no cambien, como por ejemplo al trabajar con constantes o valores de referencia.
 
+### Fórmulas, referencias y rangos:
 
+Las fórmulas no solo permiten operar con valores individuales, sino también trabajar con conjuntos de datos completos mediante rangos de celdas.
 
+Ejemplos:
+
+`=SUMA(A1:A10)` → Suma todos los valores desde la celda A1 hasta la A10.
+`=PROMEDIO(A1:A10)` → Calcula el promedio de los valores en ese rango.
+
+### Copiar Fórmulas:
+
+El autocompletado, también funciona para las fórmulas. Cuando se copia una fórmula, se ajustan automáticamente las referencias de celdas según la nueva posición.
+
+Ejemplo:
+
+En la celda C1 tenemos la fórmula:
+
+`=A1 + B1`
+
+Al copiarla hacia abajo (por ejemplo, a la celda C2), la fórmula se transforma automáticamente en:
+
+`=A2 + B2`
+
+En algunos casos, puede ser necesario que ciertas referencias no cambien al copiar la fórmula. Para esto es necesario fijar la referencia (como se mencionó anteriormente).
 
 [🔙 Inicio de la unidad](../readme.md)
