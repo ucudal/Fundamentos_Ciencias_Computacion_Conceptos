@@ -2,22 +2,25 @@ status: DRAFT
 responsable: @rafafil
 ultima_actualizacion: 2026-04-13
  
-
 ## Excel y plantillas electrónicas
 
 Son un tipo de software que tienen como objetivo permitir la administración y manipulación de datos de distinto tipo ubicados en tablas con filas y columnas.
 
 #### Componentes:
 
-CELDA: Es la unidad básica de información dentro de una plantilla electrónica. Puede contener datos (texto, números, fechas) o fórmulas.
+|              | A (Columna) | B (Columna) | C (Columna) |
+|--------------|-------------|-------------|-------------|
+| 1 (Fila)     | Celda A1    | Celda B1    | Celda C1    |
+| 2 (Fila)     | Celda A2    | Celda B2    | Celda C2    |
+| 3 (Fila)     | Celda A3    | Celda B3    | Celda C3    |
 
-FILAS: Son las divisiones horizontales de la plantilla. Se identifican mediante números (1, 2, 3, ...).
+Columnas, filas y celdas son los componentes básicos de una planilla electrónica.
 
-COLUMNAS: Son las divisiones verticales de la plantilla. Se identifican mediante letras (A, B, C, ...).
+Una celda es la intersección entre una fila y una columna. Puede contener datos (texto, números, fechas, etc.) o fórmulas.
 
-La intersección entre una fila y una columna nos da una celda. La combinación entre el identificador de la fila y la columna nos da el identificador de la celda. Ejemplo: columna A y fila 1, se obtiene la celda con identificador A1. (Saber el identificador de la celda es necesario para referirnos a la misma al momento de realizar distintas operaciones).
+El identificador de una celda (por ejemplo, A1) se construye combinando columna y fila, y permite referenciarla en operaciones y fórmulas.
 
-Si bien esta es la forma por defecto de establecer el identificador de una celda, también es posible darle un "alias" a la celda, establecido por el usuario.
+Además, es posible asignar nombres definidos (rangos con nombre) para referirse a celdas o conjuntos de celdas de forma más descriptiva.
 
 
 ### Ejemplos en el mercado:

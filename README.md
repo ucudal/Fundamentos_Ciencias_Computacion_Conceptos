@@ -53,6 +53,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 
+
 <!-- ESTADO_EDITORIAL_START -->
 
 ![Progreso](https://img.shields.io/badge/progreso-56%25-orange)
@@ -91,7 +92,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 |------------|--------|-------------|----------------------|
 | shell | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2025-11-26 |
 | latex | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@pilasguru](https://github.com/pilasguru) | 2026-04-06 |
-| excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| excel | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@rafafil](https://github.com/rafafil) | 2026-04-13 |
 | git | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@JoacoViera](https://github.com/JoacoViera) | 2026-04-05 |
 
 ### 4. Estructuras y procesos
@@ -119,6 +120,7 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
 
 
 
