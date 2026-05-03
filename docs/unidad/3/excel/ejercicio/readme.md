@@ -7,9 +7,7 @@ Este dataset ha sido extraído de Kaggle: https://www.kaggle.com/datasets/laksha
 
 Descripción del dataset:
 
-```
-El conjunto de datos incluye un registro exhaustivo de los ganadores de las carreras de Fórmula 1, desde la temporada inaugural en 1950 hasta los últimos datos disponibles en 2024. Documenta meticulosamente a los pilotos triunfadores, sus respectivos equipos y los circuitos en los que se alzaron con la victoria, ofreciendo una rica perspectiva histórica sobre la evolución de este prestigioso deporte de motor. Esta extensa recopilación no solo sirve como testimonio de la habilidad y la determinación de los pilotos que han subido al podio a lo largo de las décadas, sino que también ofrece una valiosa visión de la dinámica competitiva y los avances tecnológicos que han dado forma a la narrativa de este deporte a lo largo de su ilustre historia. Ya sea para el análisis estadístico, la investigación histórica o la mera curiosidad de los aficionados, este conjunto de datos constituye un recurso definitivo para explorar la fascinante saga de las carreras de Fórmula 1.
-```
+> El conjunto de datos incluye un registro exhaustivo de los ganadores de las carreras de Fórmula 1, desde la temporada inaugural en 1950 hasta los últimos datos disponibles en 2024. Documenta meticulosamente a los pilotos triunfadores, sus respectivos equipos y los circuitos en los que se alzaron con la victoria, ofreciendo una rica perspectiva histórica sobre la evolución de este prestigioso deporte de motor. Esta extensa recopilación no solo sirve como testimonio de la habilidad y la determinación de los pilotos que han subido al podio a lo largo de las décadas, sino que también ofrece una valiosa visión de la dinámica competitiva y los avances tecnológicos que han dado forma a la narrativa de este deporte a lo largo de su ilustre historia. Ya sea para el análisis estadístico, la investigación histórica o la mera curiosidad de los aficionados, este conjunto de datos constituye un recurso definitivo para explorar la fascinante saga de las carreras de Fórmula 1.
 
 ## Ejercicios
 
