@@ -94,7 +94,7 @@ Mostrá el estado de la lista al final de cada paso relevante.
  
 Una aplicación guarda el historial de páginas visitadas en un navegador. El usuario puede volver atrás o avanzar. Las inserciones siempre ocurren al final y las eliminaciones ocurren al principio o al final.
  
-¿Qué implementación elegís? ¿Por qué?
+Qué implementación elegís? Por qué?
  
 ---
  
@@ -102,7 +102,7 @@ Una aplicación guarda el historial de páginas visitadas en un navegador. El us
  
 Un sistema universitario almacena las materias de un estudiante. Se consulta frecuentemente la materia número `k` (por posición). Las inscripciones y bajas son raras.
  
-¿Qué implementación elegís? ¿Por qué?
+Qué implementación elegís? Por qué?
  
 ---
  
@@ -110,7 +110,7 @@ Un sistema universitario almacena las materias de un estudiante. Se consulta fre
  
 Un editor de texto necesita representar las líneas de un documento. Se insertan y eliminan líneas en cualquier posición con frecuencia. El acceso por número de línea también es importante.
  
-¿Qué implementación elegís? ¿Habría alguna alternativa intermedia? Justificá.
+Qué implementación elegís? Habría alguna alternativa intermedia? Justificá.
  
 ---
  
@@ -118,7 +118,7 @@ Un editor de texto necesita representar las líneas de un documento. Se insertan
  
 Una playlist de música se recorre siempre de principio a fin. Sin embargo, el usuario puede agregar canciones en cualquier posición y eliminar la canción que está sonando en ese momento.
  
-¿Qué implementación elegís? ¿Cambiaría algo si la playlist fuera circular (al terminar vuelve al inicio)?
+Qué implementación elegís? Cambiaría algo si la playlist fuera circular (al terminar vuelve al inicio)?
  
 ---
  
@@ -137,7 +137,7 @@ push(5)
 top()
 ```
  
-¿Qué valor retorna `top()` al final? ¿La pila se modifica con `top()`?
+Qué valor retorna `top()` al final? La pila se modifica con `top()`?
  
 ---
  
@@ -154,7 +154,7 @@ enqueue("D")
 dequeue()
 ```
  
-¿Qué elemento queda al frente al final?
+Qué elemento queda al frente al final?
  
 ---
  
@@ -173,7 +173,7 @@ pop()
 pop()
 ```
  
-¿En qué orden salen los elementos? Escribí la secuencia de valores retornados por cada `pop()`.
+En qué orden salen los elementos? Escribí la secuencia de valores retornados por cada `pop()`.
  
 ---
  
@@ -188,7 +188,7 @@ Se te pide modelar el sistema de **deshacer/rehacer** (undo/redo) de un editor d
   2. Escribir "Mundo"
   3. Deshacer
   4. Escribir "Todo"
-  5. Rehacer _(¿qué pasa aquí? justificá)_
+  5. Rehacer _(qué pasa aquí? justificá)_
 ---
  
 ## Parte 4 — Desafíos integradores
@@ -226,9 +226,9 @@ Se quiere simular la **atención en una caja de supermercado**. Los clientes lle
    - Llega Carol (carrito vacío)
    - Llega David (con carrito)
    - Llega Eva (carrito vacío)
-   - Se atiende un cliente → ¿quién es?
-   - Se atiende otro cliente → ¿quién es?
-> _¿Cambiará tu respuesta si los clientes con carrito semi-vacío también deben respetar el orden entre ellos?_
+   - Se atiende un cliente → quién es?
+   - Se atiende otro cliente → quién es?
+> _Cambiará tu respuesta si los clientes con carrito semi-vacío también deben respetar el orden entre ellos?_
  
 ---
  
