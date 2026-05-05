@@ -124,6 +124,16 @@ Responde estas preguntas usando cálculos en Excel
 
 ---
 
+### Ejercicio 7: Utilizar la función VLOOKUP o BUSCARV
+
+1. ¿Con qué escudería obtuvo Michael Schumacher su primera victoria? Indica la `Escudería` (columna `Car`).
+
+2. ¿En qué año se corrió por primera vez el Gran Premio de Korea?
+
+3. ¿Quién hizo la vuelta rápida en la primera carrera de 2005? 
+
+---
+
 ## Reto (opcional)
 
 ### Investiga y crea tu propia pregunta
@@ -144,20 +154,5 @@ Importante: Documenta tu pregunta, tu proceso y tus conclusiones.
 
 - Documento con las respuestas.
 - Hoja de Excel con las fórmulas aplicadas, tablas generadas, etc.
-
-
-## Recursos útiles
-
-### Funciones Excel que necesitarás:
-
-| Función | ¿Para qué sirve? | Ejemplo |
-|---------|-----------------|---------|
-| `CONTAR()` | Cuenta cuántas celdas tienen datos | `=CONTAR(A1:A100)` |
-| `SUMA()` | Suma todos los números en un rango | `=SUMA(B1:B100)` |
-| `PROMEDIO()` | Calcula el promedio | `=PROMEDIO(B1:B100)` |
-| `CONTAR.SI()` | Cuenta con una condición | `=CONTAR.SI(A1:A100,"Hamilton")` |
-| `SUMAR.SI()` | Suma con una condición | `=SUMAR.SI(A1:A100,"Hamilton",B1:B100)` |
-| `MAX()` | Encuentra el valor máximo | `=MAX(B1:B100)` |
-| `MIN()` | Encuentra el valor mínimo | `=MIN(B1:B100)` |
 
 ---
