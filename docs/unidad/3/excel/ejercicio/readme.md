@@ -134,6 +134,31 @@ Responde estas preguntas usando cálculos en Excel
 
 ---
 
+### Ejercicio 8: Tabla Pivot - Piloto - Cantidad Victorias
+
+1. Crea una tabla dinámica (Pivot Table): Piloto - Cantidad Victorias
+
+| Piloto | Cantidad Victorias |
+|---|---|
+| Max Verstappen | 63 |
+| Lewis Hamilton | 105 |
+
+2. Ordena la tabla:
+   - Ordena de mayor a menor cantidad de victorias
+   - Identifica los 5 pilotos con más victorias
+
+4. Ahora agrega manualmente la siguiente fila a la tabla original del dataset:
+
+| Year | Grand Prix | Date | Driver | Nationality | Car | DriverPoints | Time | FastestLap | FastestLapCode | FastestLapTime | AvgSpeed | TeamChampionshipPoints |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 2024 | San Marino | 2024-05-19 | Max Verstappen | NED | Red Bull Racing Honda RBPT | 56.0 | 1:40:52.554 | Fernando Alonso | ALO | 1:37.810 | 169.0 | 276.0 |
+
+5. Actualiza la tabla dinámica
+   - Refresca/actualiza la tabla pivot para incluir el nuevo registro
+   - Observa qué valores cambiaron
+
+---
+
 ## Reto (opcional)
 
 ### Investiga y crea tu propia pregunta
