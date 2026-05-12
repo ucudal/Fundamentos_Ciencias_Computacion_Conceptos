@@ -202,6 +202,53 @@ Incrementar front
 ```
 <img width="464" height="129" alt="image" src="https://github.com/user-attachments/assets/bdd11f07-ce50-4a4f-b0b9-2e4f7828fc96" />
 
+### PSEUDOCÓDIGO PARA OPERAR CON TDAS
+
+Un nodo es una entidad que conoce cuál es su siguiente, y que además almacena un valor (en este caso de tipo entero, pero podría ser cualquier cosa).
+    ESTRUCTURA Nodo
+        dato: entero
+        siguiente: Nodo
+    FIN ESTRUCTURA
+
+Una lista entonces, se puede representar como un **primer elemento** (que es un nodo) y podría a partir de ese primer elemento obtener todos los demás.
+
+    ESTRUCTURA Lista
+        primerElemento: Nodo
+    FIN ESTRUCTURA
+
+Un método utilitario e interno de la lista, es el crear nodo, para poder así agregar nuevos elementos.
+    
+    FUNCIÓN crearNodo(valor) RETORNA Nodo
+        nodo ← nuevo Nodo
+        nodo.dato ← valor
+        nodo.siguiente ← NULL
+        RETORNAR nodo
+    FIN FUNCIÓN
+
+Acá un ejemplo de cómo sería el método de inserción al final de la lista.
+    
+    FUNCIÓN insertarAlFinal(lista, valor)
+        // Crear nuevo nodo
+        nuevoNodo ← crearNodo(valor)
+        
+        // Verificar si la lista está vacía
+        SI lista.primerElemento = NULL ENTONCES
+            // Primer elemento de la lista
+            lista.primerElemento ← nuevoNodo
+        SINO
+            // Recorrer hasta el último nodo
+            actual ← lista.primerElemento
+            
+            MIENTRAS actual.siguiente ≠ NULL HACER
+                actual ← actual.siguiente
+            FIN MIENTRAS
+            
+            // Enlazar el último nodo con el nuevo
+            actual.siguiente ← nuevoNodo
+        FIN SI
+        
+        MOSTRAR "Valor " + valor + " insertado al final"
+    FIN FUNCIÓN
 
 ### Consideraciones de implementación:
 
