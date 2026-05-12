@@ -205,6 +205,7 @@ Incrementar front
 ### PSEUDOCÓDIGO PARA OPERAR CON TDAS
 
 Un nodo es una entidad que conoce cuál es su siguiente, y que además almacena un valor (en este caso de tipo entero, pero podría ser cualquier cosa).
+
     ESTRUCTURA Nodo
         dato: entero
         siguiente: Nodo
