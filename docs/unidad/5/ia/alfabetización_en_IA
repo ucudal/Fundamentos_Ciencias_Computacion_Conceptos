@@ -1,0 +1,323 @@
+# Unidad 5, Alfabetización en Inteligencia Artificial
+## Guía Teórica 
+
+*Fundamentos en Ciencias de la Computación*
+
+---
+
+## El presente documento
+
+Este documento está concebido como un acompañamiento teórico para quien dicte la Unidad 5 sobre Alfabetización en Inteligencia Artificial. No reemplaza las slides ni las repite, sino que las expande en profundidad conceptual, contexto histórico, fundamentos técnicos y orientaciones pedagógicas. La intención es que el docente llegue al aula con un dominio claro de los temas, anticipe las preguntas más frecuentes y pueda contextualizar cada hito en su trama histórica y técnica.
+El acceso a las diapositvas es: https://canva.link/o9f6h1lr28e6uy7 
+
+---
+
+## 1. ¿Qué es la Inteligencia Artificial?
+
+### 1.1 La definición canónica y por qué la elegimos
+
+La definición que se presenta proviene de Stuart Russell y Peter Norvig, autores del libro *Artificial Intelligence: A Modern Approach*, considerado el manual de referencia mundial del área desde hace tres décadas. La definición sostiene que un agente inteligente es aquel que percibe su entorno mediante sensores y actúa sobre él mediante actuadores, eligiendo acciones que maximicen su medida de desempeño.
+
+Conviene detenerse en cada uno de los elementos de esta definición porque cada uno está cargado de implicancias. La noción de **agente** desplaza el centro de gravedad desde la pregunta filosófica clásica (¿pueden las máquinas pensar?) hacia una pregunta operacional y verificable (¿pueden las máquinas actuar racionalmente?). Esta es una decisión teórica importante: Russell y Norvig se inscriben en la tradición de la *racionalidad como acción correcta*, en lugar de la tradición de la *imitación del pensamiento humano*. La diferencia no es menor: un agente racional no tiene por qué pensar como un humano, solo tiene que tomar decisiones que sean buenas para sus objetivos.
+
+La **percepción mediante sensores** y la **acción mediante actuadores** introducen la idea de que la IA no vive en un vacío matemático sino que está acoplada a un entorno. Los sensores pueden ser cámaras, micrófonos, lectores de texto, llamadas a APIs, mientras que los actuadores pueden ser brazos robóticos, sintetizadores de voz, escrituras en una base de datos, o simplemente la emisión de un token de texto en una conversación. Esta perspectiva permite englobar bajo un mismo paraguas formal cosas tan distintas como un robot aspirador, un sistema de recomendación de Netflix y un modelo de lenguaje conversacional.
+
+La **medida de desempeño** es quizá el componente que más conviene problematizar en clase. Toda IA está, explícita o implícitamente, optimizando algo. Una de las preguntas más fértiles que el docente puede sembrar es: ¿qué está optimizando este sistema, y quién decidió esa métrica? Buena parte de los problemas éticos que se discutirán más adelante derivan precisamente de medidas de desempeño mal especificadas o desalineadas con los valores humanos.
+
+### 1.2 Una observación pedagógica importante
+
+Los estudiantes suelen llegar al aula con dos representaciones contradictorias y ambas inexactas de la IA. Por un lado, una representación inflada por la ciencia ficción, donde la IA es un ente consciente. Por otro, una representación reduccionista que la identifica con un chatbot. La definición de Russell y Norvig es útil precisamente porque ofrece un marco intermedio: la IA es comportamiento racional acoplado a un entorno, ni misticismo ni mera interfaz. Recomendamos abrir la clase recogiendo definiciones espontáneas de los estudiantes antes de presentar la canónica, y luego volver a esas definiciones para mostrar qué capturan bien y qué dejan afuera.
+
+Una analogía útil: pensar al agente como un termostato extremadamente sofisticado. El termostato percibe (temperatura), actúa (enciende o apaga la calefacción) y optimiza una medida de desempeño (mantener la temperatura cerca del setpoint). La diferencia con la IA contemporánea no es de naturaleza sino de grado: más sensores, más opciones de acción, y medidas de desempeño mucho más complejas.
+
+---
+
+## 2. Las tres áreas que sostienen la IA
+
+La IA tal como la conocemos hoy no se sostiene por una sola disciplina sino por la convergencia de tres áreas que conviene presentar como un trípode: si una de las tres patas falla, el conjunto se cae. Estas áreas son el cómputo, los datos y el modelado.
+
+### 2.1 Cómputo
+
+El cómputo se refiere al sustrato físico sobre el que corre cualquier sistema de IA: el hardware y la infraestructura. Aunque suele parecer la dimensión menos glamorosa, es la que ha hecho posibles los avances de los últimos quince años. Conviene transmitir a los estudiantes que las ideas centrales del deep learning moderno, en particular las redes neuronales con muchas capas y el algoritmo de retropropagación, ya existían en los años ochenta. Lo que faltaba era hardware capaz de entrenarlas en tiempos razonables.
+
+El punto de inflexión ocurrió cuando los investigadores empezaron a usar GPUs (Graphics Processing Units), diseñadas originalmente para videojuegos, para entrenar redes neuronales. Las GPUs están optimizadas para realizar muchas operaciones de álgebra lineal en paralelo, que es precisamente la operación dominante en el entrenamiento de redes neuronales. Más adelante aparecieron las TPUs de Google, especializadas aún más en cargas de trabajo de aprendizaje profundo. Hoy, la frontera competitiva del cómputo en IA pasa por clústeres de decenas de miles de aceleradores conectados por redes de alta velocidad, con costos que se miden en cientos de millones de dólares por sistema.
+
+Esta dimensión también incluye la infraestructura en sentido más amplio: centros de datos, sistemas de refrigeración, suministro eléctrico y redes de comunicación. Vale la pena mencionar este punto al pasar porque conecta directamente con la sección de impacto ambiental.
+
+### 2.2 Datos
+
+Los datos constituyen el insumo del cual los modelos aprenden. La cadena de valor de los datos incluye su recolección, su manipulación o transformación, y su almacenamiento. Cada etapa tiene desafíos propios.
+
+La **recolección** plantea problemas técnicos (cómo se obtienen los datos, con qué frecuencia, con qué granularidad) y éticos (con qué consentimiento, qué sesgos introduce el proceso de muestreo, qué poblaciones quedan subrepresentadas). La **manipulación** abarca la limpieza, la normalización, la imputación de valores faltantes, la ingeniería de variables y la generación de etiquetas. Es un trabajo intensivo y, en la práctica industrial, suele consumir más tiempo que el modelado propiamente dicho. Finalmente, el **almacenamiento** plantea desafíos de escala (terabytes y petabytes son hoy habituales), de acceso eficiente y de gobernanza.
+
+Vale la pena que el docente enfatice una idea contraintuitiva: muchas veces la calidad del sistema final depende más de la calidad de los datos que del modelo elegido. Esta observación, popularizada por Andrew Ng bajo el lema *data-centric AI*, contradice la intuición de que el progreso viene exclusivamente de modelos más sofisticados.
+
+### 2.3 Modelado
+
+El modelado abarca el diseño de la arquitectura del modelo y su entrenamiento. Es la dimensión que suele acaparar la atención mediática y académica, en parte porque es donde aparecen los nombres reconocibles (transformers, redes convolucionales, GANs). Sin embargo, el modelado no opera en el vacío: una arquitectura genial sin datos suficientes ni cómputo adecuado no produce nada interesante.
+
+El diseño del modelo implica decisiones sobre la estructura de la red, las funciones de activación, el tipo de capas, los mecanismos de atención, entre otras opciones. El entrenamiento implica decidir el algoritmo de optimización, la tasa de aprendizaje, el tamaño de los lotes, la función de pérdida y muchos otros hiperparámetros. Estas decisiones, lejos de ser puramente técnicas, encarnan supuestos sobre el problema que se quiere resolver.
+
+### 2.4 Por qué la metáfora del trípode importa
+
+Cuando los estudiantes preguntan por qué la IA explotó en los últimos años, la respuesta más completa no es "porque inventamos algo nuevo" sino "porque las tres patas del trípode maduraron al mismo tiempo". Los algoritmos clave estaban disponibles desde hacía décadas, pero recién en torno a 2010 confluyeron los datos masivos (internet, redes sociales, datasets etiquetados como ImageNet) y el cómputo accesible (GPUs comerciales). Este marco ayuda a los estudiantes a tener una mirada sistémica y a no atribuir mágicamente los avances a un solo factor.
+
+---
+
+## 3. El mapa conceptual: IA, ML, DL, NLP y GenAI
+
+La slide cuatro presenta un diagrama de conjuntos anidados que conviene desplegar con calma porque condensa toda la jerarquía del campo. El docente debería poder explicar cada nivel y, sobre todo, qué relación tiene con los anteriores.
+
+### 3.1 Inteligencia Artificial como conjunto mayor
+
+La IA es el círculo más amplio: comprende cualquier sistema que pueda simular o reproducir comportamientos asociados a la inteligencia humana. Esto incluye técnicas que hoy nos parecen primitivas, como los **sistemas expertos** de los años setenta y ochenta, que codificaban conocimiento humano en reglas explícitas del tipo *si X entonces Y*. También incluye algoritmos clásicos de búsqueda y planificación, como los que se usan en motores de ajedrez basados en exploración de árboles. La IA, en sentido amplio, no requiere aprendizaje: un sistema basado en reglas puede ser inteligente en el sentido funcional sin haber aprendido de datos.
+
+Es importante aclarar este punto porque los estudiantes tienden a identificar IA con machine learning, y a partir de allí con redes neuronales. La identificación es comprensible dado el momento histórico, pero conceptualmente es incorrecta.
+
+### 3.2 Machine Learning como subconjunto
+
+El machine learning es un subconjunto estricto de la IA: incluye solo aquellos sistemas que aprenden patrones a partir de datos en lugar de seguir reglas codificadas por humanos. La distinción clave es el desplazamiento del programador: en un sistema clásico, el programador escribe las reglas; en un sistema de machine learning, el programador escribe el algoritmo de aprendizaje, y son los datos los que generan las reglas implícitas.
+
+Dentro de ML conviven tres grandes paradigmas. El **aprendizaje supervisado** opera con datos etiquetados: a cada entrada le corresponde una salida correcta, y el modelo aprende a mapear de una a otra (clasificación de imágenes, detección de spam, predicción de precios). El **aprendizaje no supervisado** trabaja con datos sin etiquetas y busca estructura latente (clustering, reducción de dimensionalidad, detección de anomalías). El **aprendizaje por refuerzo** opera con un agente que interactúa con un entorno y recibe recompensas, aprendiendo qué políticas de acción maximizan la recompensa acumulada (videojuegos, robótica, control de procesos).
+
+### 3.3 Deep Learning como subconjunto de ML
+
+El deep learning es a su vez un subconjunto del machine learning, caracterizado por el uso de redes neuronales con múltiples capas. La profundidad (el adjetivo *deep*) se refiere precisamente al número de capas ocultas. Una red con una o dos capas se considera superficial; una red con decenas o cientos de capas es profunda.
+
+La gran ventaja del deep learning es la capacidad de aprender representaciones jerárquicas. En el procesamiento de imágenes, por ejemplo, las primeras capas aprenden a detectar bordes, las intermedias detectan formas y texturas, y las más profundas detectan objetos completos. Esta jerarquía emerge del entrenamiento, no se programa explícitamente, y es lo que diferencia al deep learning de las técnicas clásicas de ML que requerían que un humano diseñara manualmente las características relevantes (lo que se conocía como *feature engineering*).
+
+### 3.4 NLP y Generative AI
+
+El procesamiento de lenguaje natural y la IA generativa se presentan como subconjuntos parcialmente solapados dentro del deep learning. El NLP abarca cualquier procesamiento computacional del lenguaje humano: traducción automática, análisis de sentimiento, clasificación de textos, extracción de información, sistemas conversacionales. La IA generativa, por su parte, abarca todos los sistemas capaces de producir contenido nuevo (texto, imágenes, audio, video, código) en lugar de simplemente clasificar o predecir.
+
+El solapamiento entre ambos es lo que define a los modelos de lenguaje generativos modernos como GPT, Claude o Gemini: pertenecen simultáneamente al NLP (procesan lenguaje) y a la IA generativa (producen contenido nuevo). Antes del despegue de los transformers en 2017, el NLP estaba dominado por tareas discriminativas y la generación era una capacidad marginal; hoy la situación se invirtió.
+
+### 3.5 Una recomendación pedagógica
+
+Conviene dibujar este diagrama en el pizarrón paso a paso y pedir a los estudiantes que ubiquen ejemplos concretos: ¿dónde va un sistema experto médico? ¿Dónde va el reconocimiento facial? ¿Dónde va Google Translate? ¿Dónde va Stable Diffusion? Este ejercicio cristaliza la jerarquía mucho mejor que la mera presentación visual del diagrama.
+
+---
+
+## 4. Historia de la Inteligencia Artificial
+
+La historia de la IA suele presentarse cronológicamente, pero gana profundidad cuando se la lee como una sucesión de **inviernos** y **primaveras**. Esta metáfora estacional es importante porque transmite una idea epistemológica relevante: el campo no avanzó de manera monotónica, sino con ciclos de entusiasmo seguidos de períodos de decepción y financiamiento reducido. Comprender estos ciclos ayuda a los estudiantes a desarrollar una mirada crítica frente a las olas de hype contemporáneas.
+
+### 4.1 Las raíces teóricas (1943 a 1956)
+
+Aunque el término *inteligencia artificial* se acuñó en 1956, el campo tiene raíces más antiguas. En 1943, Warren McCulloch y Walter Pitts publicaron un modelo matemático de la neurona basado en lógica proposicional. Esta neurona artificial recibía entradas binarias, las sumaba con pesos y producía una salida binaria según un umbral. Aunque hoy parezca primitivo, este modelo introdujo la idea fundamental de que la computación puede emerger de unidades simples interconectadas, idea que sigue siendo el núcleo del deep learning.
+
+La **Conferencia de Dartmouth** de 1956 es el evento canónico de fundación del campo. Organizada por John McCarthy, Marvin Minsky, Claude Shannon y Nathaniel Rochester, propuso reunir a investigadores para explorar la conjetura de que cada aspecto del aprendizaje o cualquier otro rasgo de la inteligencia podría, en principio, ser descrito con suficiente precisión para que una máquina lo simulara. Ahí nació el nombre *artificial intelligence*. Los participantes proyectaron un horizonte optimista de pocos años para lograr inteligencia general, optimismo que pronto se vería frustrado.
+
+### 4.2 El Test de Turing (1950)
+
+Aunque cronológicamente anterior a Dartmouth, el Test de Turing aparece como hito conceptual previo. Alan Turing, en su artículo *Computing Machinery and Intelligence* (1950), eludió la pregunta filosófica directa sobre si las máquinas pueden pensar y la reformuló en términos operacionales mediante lo que llamó el **juego de imitación**. La idea es la siguiente: un evaluador humano (C en el diagrama de la slide) mantiene conversaciones por escrito con dos interlocutores ocultos, uno humano (B) y uno máquina (A). Si el evaluador no puede distinguir cuál es cuál con una probabilidad significativamente mejor que el azar, se dice que la máquina ha pasado el test.
+
+Conviene transmitir a los estudiantes que el Test de Turing es relevante por motivos históricos y conceptuales, pero ya no es considerado por la comunidad científica como una buena medida de inteligencia. Los modelos de lenguaje actuales superan el test en muchas conversaciones cortas, pero esto no significa que sean inteligentes en el sentido pleno del término. El test mide capacidad de imitación lingüística, no comprensión genuina. La crítica más célebre es el argumento de la *habitación china* de John Searle, que sostiene que un sistema podría producir respuestas indistinguibles de las humanas sin comprender nada de lo que dice. Esta discusión filosófica conserva valor pedagógico porque obliga a los estudiantes a distinguir entre comportamiento y comprensión.
+
+### 4.3 Rosenblatt y el Perceptrón (1958)
+
+Frank Rosenblatt, psicólogo y científico cognitivo, construyó el Perceptrón a fines de los años cincuenta. Se trata del primer modelo de neurona artificial entrenable: a diferencia de la neurona de McCulloch-Pitts, cuyos pesos eran fijos, los pesos del perceptrón podían ajustarse mediante un algoritmo de aprendizaje a partir de ejemplos.
+
+El esquema del perceptrón mostrado en la slide ilustra el funcionamiento básico: las entradas (x₁, x₂, x₃) se multiplican por pesos (w₁, w₂, w₃), se suman, y el resultado pasa por una función de activación que produce la salida. Esta arquitectura, en su versión más sofisticada, es exactamente la misma que se usa hoy en las capas individuales de cualquier red neuronal profunda.
+
+Rosenblatt llegó a construir físicamente un perceptrón en hardware analógico, el Mark I Perceptron, capaz de aprender a reconocer patrones visuales simples. La prensa de la época, con el optimismo característico, anticipó que pronto las máquinas caminarían, hablarían y serían conscientes. Es un buen ejemplo para que los estudiantes calibren la diferencia entre las capacidades reales y la cobertura mediática, tanto entonces como ahora.
+
+### 4.4 El primer invierno (Minsky y Papert, 1969)
+
+En 1969, Marvin Minsky y Seymour Papert publicaron *Perceptrons*, un libro que demostraba matemáticamente las limitaciones del perceptrón de una sola capa. En particular, mostraron que un perceptrón simple no puede aprender la función lógica XOR, un problema aparentemente trivial. El libro tuvo un impacto demoledor sobre la investigación en redes neuronales: el financiamiento se redirigió hacia la IA simbólica y las redes neuronales quedaron marginadas durante más de una década.
+
+Este episodio es valioso pedagógicamente porque ilustra cómo una crítica técnicamente correcta puede tener efectos sociopolíticos desproporcionados. La limitación señalada por Minsky y Papert se resolvía simplemente agregando capas ocultas, pero la falta de algoritmos eficientes para entrenar redes multicapa, junto con el desánimo generalizado, hicieron que esta solución tardara casi veinte años en consolidarse.
+
+### 4.5 La retropropagación (Rumelhart, Hinton, Williams, 1986)
+
+En 1986, David Rumelhart, Geoffrey Hinton y Ronald Williams publicaron un artículo que popularizó el algoritmo de **retropropagación del error** (backpropagation) para entrenar redes neuronales multicapa. El algoritmo en sí había sido descubierto y redescubierto varias veces (Werbos lo había formulado en 1974), pero la formulación de 1986 fue la que disparó el renacimiento del conexionismo.
+
+La idea fundamental de la retropropagación es elegante: calcular cómo debe modificarse cada peso de la red propagando hacia atrás el error desde la capa de salida hasta la capa de entrada, usando la regla de la cadena del cálculo diferencial. Esto permite, en principio, entrenar redes de profundidad arbitraria. En la práctica, sin embargo, entrenar redes muy profundas seguía siendo difícil por razones técnicas (gradientes que se desvanecen o explotan, sobreajuste), y el segundo invierno de la IA se instaló durante los años noventa.
+
+Vale la pena mencionar que Geoffrey Hinton, una de las figuras centrales de esta historia, recibió el Premio Nobel de Física en 2024 por su trabajo fundacional en redes neuronales, junto con John Hopfield. Es un dato que suele despertar interés en los estudiantes.
+
+### 4.6 LeCun y las redes convolucionales (1998)
+
+Yann LeCun desarrolló LeNet-5 a fines de los años noventa, una arquitectura de red neuronal convolucional capaz de reconocer dígitos escritos a mano con alta precisión. Las redes convolucionales introdujeron una idea crucial: en lugar de tratar cada píxel como independiente, los filtros convolucionales explotan la estructura espacial de las imágenes. LeNet-5 se desplegó industrialmente en sistemas de lectura de cheques bancarios, siendo uno de los primeros casos de éxito comercial del deep learning.
+
+### 4.7 Deep Blue vence a Kasparov (1997)
+
+En 1997, la computadora Deep Blue de IBM derrotó al campeón mundial de ajedrez Garry Kasparov en un match a seis partidas. Este hito tiene una doble lectura. Por un lado, marca un momento simbólico en que una máquina superó a la mejor inteligencia humana en un dominio considerado emblemático de la inteligencia. Por otro, conviene aclarar que Deep Blue no usaba aprendizaje automático en el sentido moderno: era un sistema basado en búsqueda masiva (evaluaba unos doscientos millones de posiciones por segundo) combinada con funciones de evaluación heurísticas afinadas manualmente por maestros de ajedrez. Es decir, Deep Blue era IA pero no era machine learning.
+
+Esta distinción es importante: muestra que se puede alcanzar rendimientos sobrehumanos sin aprendizaje, mediante fuerza bruta computacional bien orientada. Veinte años después, AlphaGo de DeepMind venció al campeón mundial de Go, pero esta vez sí mediante deep learning y aprendizaje por refuerzo, en un dominio donde la fuerza bruta es inviable.
+
+### 4.8 Hinton y las Deep Belief Networks (2006)
+
+En 2006, Geoffrey Hinton y colaboradores publicaron un método de pre-entrenamiento de redes neuronales profundas mediante Deep Belief Networks. Por primera vez se mostraba que las redes muy profundas podían entrenarse de manera efectiva. Este trabajo, junto con la disponibilidad creciente de GPUs y datasets grandes, marcó el inicio de la segunda primavera moderna de la IA.
+
+### 4.9 AlexNet gana ImageNet (2012)
+
+En 2012, Alex Krizhevsky, Ilya Sutskever y Geoffrey Hinton presentaron AlexNet en la competencia ImageNet, donde los sistemas debían clasificar imágenes en mil categorías. AlexNet redujo el error de clasificación del 26 por ciento del año anterior a aproximadamente 15 por ciento, un salto sin precedentes en la historia del benchmark. Este resultado funcionó como un sismo: cambió la dirección de la investigación en visión por computadora prácticamente de la noche a la mañana, y consolidó el deep learning como el paradigma dominante.
+
+La slide muestra ejemplos del tipo de tareas que AlexNet podía resolver, incluyendo no solo la clasificación de un objeto principal por imagen sino también las clasificaciones más probables alternativas (los rectángulos con etiquetas como *container ship*, *lifeboat*, *amphibian*), y a la derecha tareas de segmentación que son extensiones naturales del problema de clasificación.
+
+### 4.10 Las GANs de Goodfellow (2014)
+
+En 2014, Ian Goodfellow propuso las **Generative Adversarial Networks** (GANs), una arquitectura compuesta por dos redes que compiten entre sí: una *generadora*, que produce datos sintéticos, y una *discriminadora*, que intenta distinguir entre datos reales y sintéticos. Ambas se entrenan simultáneamente en un juego de suma cero, y como resultado la generadora aprende a producir datos cada vez más realistas. Las GANs fueron la primera técnica capaz de generar imágenes fotorrealistas y abrieron el campo de la IA generativa visual. La idea es lo suficientemente bella como para detenerse un momento en clase: dos redes adversarias que, al competir, se mejoran mutuamente.
+
+### 4.11 ResNet supera a humanos en ImageNet (2015)
+
+En 2015, Kaiming He y sus colaboradores en Microsoft Research introdujeron las **Residual Networks** o ResNets, que permitieron entrenar redes de hasta 152 capas mediante el truco de las *conexiones residuales* (atajos que dejan que la información salte capas). Con ResNet, los sistemas de visión por computadora superaron por primera vez el rendimiento humano en la clasificación de ImageNet. Es un hito simbólico relevante: en un dominio acotado y bien definido, las máquinas pasaron a ser mejores que los humanos.
+
+### 4.12 Attention is All You Need (2017)
+
+En 2017, un equipo de Google Brain y Google Research publicó el artículo *Attention is All You Need*, que introdujo la arquitectura **Transformer**. Esta arquitectura abandonó las redes recurrentes que dominaban el procesamiento de lenguaje y las reemplazó por un mecanismo de **atención** que permite a cada token de una secuencia atender a todos los demás simultáneamente.
+
+La slide ilustra la intuición del mecanismo de atención con el ejemplo de la frase *the animal didn't cross the street because it was too tired*. La palabra *it* es ambigua: ¿se refiere al animal o a la calle? El mecanismo de atención permite que el modelo, al procesar *it*, asigne más peso a *animal* que a *street*, resolviendo la ambigüedad por contexto. El segundo ejemplo de la slide muestra ambigüedades léxicas similares: *bat* puede ser un animal o un instrumento deportivo, *light* puede ser un adjetivo de peso o un sustantivo de iluminación. La atención permite resolver estas ambigüedades aprovechando el contexto completo de la oración.
+
+El Transformer es la arquitectura sobre la que se construyen prácticamente todos los modelos de lenguaje contemporáneos, incluyendo GPT, Claude, Gemini y LLaMA. También se ha adaptado para imágenes (Vision Transformers), audio y otras modalidades. Es la arquitectura más influyente de la última década de IA, y conviene transmitir su importancia.
+
+### 4.13 Cómo enseñar la línea de tiempo
+
+La slide doce condensa toda esta historia en una línea de tiempo con categorías codificadas por color: fundamentos teóricos, avances en deep learning, inviernos de la IA, hito simbólico y punto de inflexión moderno. Recomendamos no recorrer la línea de tiempo en orden estricto sino agruparla por categorías y discutir cómo se intercalan. El mensaje pedagógico es que el campo no avanza linealmente sino mediante alternancias de teoría, implementación, escala y eventos simbólicos.
+
+Una pregunta que los estudiantes suelen hacer es: ¿estamos hoy en una primavera o en una burbuja a punto de estallar? No hay respuesta correcta, pero el docente puede orientar la discusión hacia los indicadores históricos: las primaveras anteriores colapsaron cuando las expectativas excedieron por mucho las capacidades reales. Hoy las capacidades son sustancialmente reales, pero las expectativas también lo son. Es una discusión honesta donde no hay un veredicto único.
+
+---
+
+## 5. Limitaciones Éticas de la Inteligencia Artificial
+
+La sección sobre ética no debe presentarse como un apéndice opcional sino como una dimensión constitutiva del ejercicio profesional. Conviene transmitir a los estudiantes que cualquiera que trabaje con IA hoy es responsable por las consecuencias de sus sistemas, y que esta responsabilidad incluye dimensiones que tradicionalmente se consideraban externas a la ingeniería: el ambiente y los derechos de las personas.
+
+Las slides destacan dos limitaciones, aunque la lista podría ampliarse a equidad algorítmica, transparencia, explicabilidad, alineación, riesgos de uso dual y otros. El recorte por impacto ambiental y privacidad de datos es deliberado porque son las dos áreas con mayor evidencia empírica reciente y mayor relevancia inmediata para el ejercicio profesional.
+
+### 5.1 Impacto ambiental
+
+El impacto ambiental de la IA se materializa a lo largo de toda la cadena de valor tecnológica, no solo en el entrenamiento de modelos. La slide cuatorce presenta esta cadena en seis etapas: extracción de materia prima, fabricación de materiales, fabricación de equipos, entrenamiento del modelo, despliegue del modelo y disposición o fin de vida.
+
+Cada etapa tiene una huella propia. La **extracción de materia prima** incluye la minería de litio, cobalto, tierras raras y otros materiales para fabricar chips y baterías, con impactos ambientales y sociales significativos. La **fabricación de materiales y equipos** consume agua y energía intensivamente: producir un solo chip requiere cientos de litros de agua ultrapurificada y un alto consumo eléctrico. El **entrenamiento del modelo** es la etapa más mediatizada: entrenar un modelo de gran escala como GPT-4 se estima en cientos de millones de dólares en cómputo y emisiones del orden de cientos de toneladas de CO2 equivalente. Pero, contraintuitivamente, el **despliegue** o inferencia puede ser ambientalmente más costoso a largo plazo, porque ocurre millones o miles de millones de veces, mientras que el entrenamiento ocurre una sola vez. Finalmente, la **disposición** plantea el problema del residuo electrónico: hardware obsoleto cada pocos años, difícil de reciclar.
+
+Las slides quince y dieciséis presentan tablas extraídas del artículo de De Vries-Gao (2025) sobre las huellas de carbono y agua de los centros de datos. Estas tablas son pedagógicamente valiosas por dos motivos. Primero, porque presentan datos cuantitativos concretos en lugar de afirmaciones genéricas. Segundo, y más importante, porque muestran qué reportan y qué no reportan las grandes empresas tecnológicas. La tabla 1 documenta qué métricas publican Amazon, Apple, Baidu, ByteDance, CoreWeave, Google, Meta, Microsoft, Oracle, Tesla y Tencent. Lo más llamativo es la prevalencia de los *no* en las columnas: muchas empresas no reportan el consumo eléctrico desagregado por centro de datos, casi ninguna reporta el consumo de cargas de trabajo específicas de IA, y la mayoría no reporta consumo indirecto de agua.
+
+La tabla 2 muestra los valores numéricos donde sí hay reportes. Google, Meta y Microsoft son las empresas que más transparencia ofrecen, y sus consumos son del orden de decenas de millones de megavatios hora anuales. La **intensidad de carbono implícita** (toneladas de CO2 por megavatio hora) varía entre 0.17 y 0.64, una diferencia significativa que refleja la matriz energética de la región donde se ubican los centros de datos. La tabla 3 hace lo análogo con consumo de agua, donde aparecen métricas como el PUE (Power Usage Effectiveness, una medida de eficiencia energética del centro de datos) y el WUE (Water Usage Effectiveness, su análogo para agua).
+
+El mensaje que conviene destacar es doble. Por un lado, hay un problema real de transparencia: si la mayoría de las empresas no reporta el consumo desagregado para cargas de trabajo de IA, es imposible optimizar lo que no se mide. Por otro, el problema no se resuelve solo con la voluntad individual de los desarrolladores, sino que requiere marcos regulatorios y estándares de reporte. Es un buen momento para discutir con los estudiantes la idea de que la ética no es solo personal sino también estructural.
+
+Una observación adicional para discusión en clase: cuando un usuario hace una consulta a un modelo de lenguaje, está activando una porción mínima pero no despreciable de esta cadena. Si la institución educativa tiene compromisos de sostenibilidad, vale la pena reflexionar sobre el costo ambiental de los hábitos de uso, sin caer en el moralismo individualista que invisibiliza la responsabilidad de los grandes proveedores.
+
+### 5.2 Privacidad de Datos
+
+La privacidad de datos plantea problemas específicos cuando los datos se vuelven el insumo central de sistemas de IA. La slide diecisiete identifica tres dimensiones que conviene desarrollar.
+
+**Recopilación de datos sensibles o sin consentimiento.** Buena parte de los modelos de lenguaje y de visión actuales se entrenaron con datos extraídos masivamente de internet, incluyendo contenidos protegidos por derechos de autor, datos personales y obras creativas sin consentimiento explícito de sus autores. Esta práctica está actualmente bajo litigio en múltiples jurisdicciones. Más allá del aspecto legal, plantea una pregunta ética: ¿quién es dueño de los datos que las personas dejan en internet, y para qué pueden ser usados? Las regulaciones como el RGPD europeo o las leyes nacionales de protección de datos en Uruguay y Argentina establecen principios de consentimiento informado, limitación de finalidad y minimización, principios que la práctica industrial de la IA cumple solo parcialmente.
+
+**Sesgo obtenido de los datos.** Los modelos de IA aprenden los patrones presentes en sus datos, incluyendo los sesgos sistemáticos. Si un modelo de selección de personal se entrena con datos históricos de una empresa que discriminó por género, el modelo aprenderá y perpetuará esa discriminación. Si un modelo de reconocimiento facial se entrena predominantemente con rostros de personas blancas, su precisión sobre personas de otras etnias será sistemáticamente menor. Casos célebres como el sistema COMPAS de evaluación de riesgo de reincidencia criminal en Estados Unidos, o el algoritmo de reclutamiento de Amazon que descartaba currículums de mujeres, son ejemplos canónicos que vale la pena traer al aula.
+
+El sesgo tiene una particularidad técnica: no es necesariamente eliminable mediante el simple incremento de datos. Si el problema está en la representación misma de los datos disponibles, agregar más datos del mismo tipo amplifica el sesgo en lugar de mitigarlo. La mitigación de sesgos requiere intervenciones específicas en la recolección, el etiquetado, el modelado y la evaluación, y es un área activa de investigación.
+
+**Exfiltración y fuga de datos.** Los modelos de lenguaje grandes pueden memorizar fragmentos de sus datos de entrenamiento y reproducirlos en sus respuestas, lo que plantea riesgos cuando los datos de entrenamiento contienen información sensible. También hay riesgos en la dirección inversa: los datos que los usuarios envían a un modelo durante el uso pueden quedar registrados, ser reutilizados para entrenamiento o filtrarse en brechas de seguridad. Esta es una preocupación particularmente relevante en contextos profesionales donde la información compartida con un chatbot puede contener secretos comerciales o datos personales de terceros.
+
+### 5.3 Una orientación pedagógica para la sección ética
+
+Las discusiones éticas pueden caer fácilmente en dos polos igualmente improductivos: el moralismo abstracto, que enuncia principios sin conectarlos con decisiones técnicas, y el cinismo pragmático, que asume que nada se puede hacer porque las empresas grandes deciden todo. Recomendamos navegar entre ambos polos mediante casos concretos: presentar un sistema, identificar las decisiones técnicas y de diseño que tiene, y discutir qué hubiera podido hacerse distinto y con qué consecuencias.
+
+---
+
+## 6. Uso de Modelos de IA: Prompt Engineering y Parámetros de Inferencia
+
+La última sección de la unidad transita desde el plano teórico hacia el plano instrumental: cómo interactuar de manera efectiva con un modelo de lenguaje. Esta transición es importante porque muchos estudiantes terminarán usando estos modelos profesionalmente sin necesariamente entrenarlos, y la calidad de su uso dependerá de su capacidad para formular prompts y elegir parámetros adecuados.
+
+Las slides recomiendan Google AI Studio como entorno experimental, lo que tiene la ventaja didáctica de permitir manipular parámetros que en interfaces comerciales suelen estar ocultos. Conviene que el docente abra AI Studio en vivo durante la clase para mostrar la interfaz y los controles disponibles.
+
+### 6.1 Prompt Engineering: definición y alcance
+
+El **prompt engineering** es el conjunto de técnicas para formular las entradas (los *prompts*) que se envían a un modelo de lenguaje de modo de obtener respuestas de mayor calidad. Conviene desmitificarlo: no es una disciplina formal con teoremas, sino un conjunto de buenas prácticas empíricas que evolucionan rápidamente. Sin embargo, dominar estas prácticas marca una diferencia sustancial en los resultados, y vale la pena enseñarlas explícitamente.
+
+Las slides estructuran el prompt engineering en cuatro grupos: fundamentos, aprendizaje en contexto, razonamiento estructurado y function calling. Desarrollamos cada uno.
+
+### 6.2 Fundamentos del prompt
+
+Los tres componentes fundamentales de un buen prompt son la instrucción clara, el rol o persona y el contexto. La **instrucción clara** indica qué se quiere que el modelo haga. Debe ser explícita, accionable y, en lo posible, mensurable. Una instrucción como *cuéntame sobre Python* es inferior a *explicá las tres principales diferencias entre Python 2 y Python 3 en menos de doscientas palabras*. La especificidad reduce la ambigüedad y aumenta la consistencia de las respuestas.
+
+El **rol o persona** asigna al modelo una identidad o perspectiva desde la cual debe operar. Decirle *actuá como un tutor experto en programación para estudiantes universitarios* condiciona el registro, el vocabulario y el nivel de detalle de la respuesta. La razón por la cual esto funciona es que el modelo, durante su entrenamiento, vio muchos textos producidos por tutores expertos, y la persona activa estadísticamente esos patrones. Es importante transmitir a los estudiantes que asignar una persona no le da al modelo capacidades nuevas, solo orienta cómo va a utilizar las que ya tiene.
+
+El **contexto** provee información de fondo relevante para que la respuesta sea adecuada al caso particular. Indicarle al modelo *la explicación es para una estudiante de ingeniería que recién empieza desarrollo web* es contexto que afecta el nivel asumido y los referentes empleados. Sin contexto, el modelo tiene que adivinar la audiencia y suele tomar decisiones promedio.
+
+El ejemplo de la slide veinte ilustra los tres componentes integrados en un único prompt bien construido: persona (tutor experto), objetivo (explicar qué es una API REST), instrucciones (lenguaje claro, menos de 150 palabras, analogía cotidiana) y contexto (estudiante de ingeniería que recién empieza). Es un buen modelo para que los estudiantes lo imiten al principio.
+
+### 6.3 Aprendizaje en contexto
+
+El aprendizaje en contexto (*in-context learning*) es una propiedad emergente de los modelos de lenguaje grandes: pueden aprender a hacer una tarea simplemente viendo ejemplos en el prompt, sin necesidad de modificar sus pesos. Se distinguen tres regímenes según cuántos ejemplos se incluyan.
+
+**Zero-shot**: no se incluye ningún ejemplo, solo la instrucción. Es lo que hace la mayoría de los usuarios habituales cuando le pide algo a un chatbot. Funciona bien para tareas que el modelo ya ha visto mil veces durante su entrenamiento, como resumir un texto o traducir entre lenguas comunes.
+
+**One-shot**: se incluye un único ejemplo de entrada y salida deseada antes de la consulta real. Esto sirve para fijar un formato específico o un estilo que la instrucción sola no captura bien.
+
+**Few-shot**: se incluyen varios ejemplos (típicamente entre dos y diez). Es la técnica más poderosa de aprendizaje en contexto: permite que el modelo abstraiga el patrón compartido por los ejemplos y lo aplique al caso nuevo. Es particularmente útil para tareas idiosincráticas o para formatos de salida estructurada que serían difíciles de describir verbalmente.
+
+La intuición subyacente, que conviene transmitir, es que un modelo de lenguaje funciona como un predictor de continuaciones probables. Cuando ve varios ejemplos del mismo patrón, la continuación más probable es otro caso del patrón. El few-shot no le enseña al modelo en sentido estricto: lo invita a inferir un patrón y a continuarlo.
+
+### 6.4 Razonamiento estructurado
+
+Cuando las tareas requieren razonamiento de múltiples pasos, las técnicas anteriores se quedan cortas. Allí entran las técnicas de razonamiento estructurado.
+
+**Chain-of-Thought (CoT)**. La idea, propuesta por Wei et al. en 2022, consiste simplemente en pedirle al modelo que razone paso a paso antes de dar la respuesta final. La intuición es que descomponer el problema en pasos intermedios reduce la carga cognitiva por paso y disminuye errores. Empíricamente, modelos que fallan en problemas matemáticos en modo zero-shot directo, tienen rendimientos significativamente mejores cuando se les pide que muestren el razonamiento. La técnica se invoca con frases tan simples como *razoná paso a paso* o *pensemos esto detenidamente*. Algunos modelos recientes hacen Chain-of-Thought de manera implícita y nativa.
+
+**Self-consistency**. Es una extensión de CoT: en lugar de generar una sola cadena de razonamiento, se generan varias y se elige la respuesta mayoritaria. La intuición es que las cadenas correctas tienden a converger a la misma respuesta, mientras que los errores se dispersan. Es particularmente útil en problemas con respuesta cerrada (matemáticas, lógica) donde puede establecerse una votación entre las salidas.
+
+**Tree-of-Thoughts**. Generaliza CoT a una estructura arbórea: en cada paso del razonamiento, el modelo considera varias continuaciones posibles, las evalúa parcialmente y poda las menos prometedoras. Es análogo a la búsqueda en árboles que usan los motores de ajedrez, pero aplicada al razonamiento en lenguaje natural. Es más costoso computacionalmente que CoT, pero más robusto en problemas complejos.
+
+El ejemplo de la slide veintiuno ilustra un prompt que combina CoT y self-consistency para planificar un viaje a Japón: pide razonar paso a paso, generar tres itinerarios alternativos, evaluarlos y elegir el mejor. Es un buen ejemplo de cómo las técnicas pueden componerse en un único prompt.
+
+### 6.5 Function Calling
+
+Las técnicas anteriores trabajan con el modelo como una caja cerrada. Las técnicas de function calling abren la caja y le permiten al modelo interactuar con herramientas externas, lo que extiende sus capacidades de manera sustancial.
+
+**Retrieval-Augmented Generation (RAG)**. Combina un modelo de lenguaje con un sistema de recuperación de información. Antes de responder, el sistema busca documentos relevantes en una base de conocimiento (típicamente una base vectorial), los inserta en el contexto del prompt, y luego el modelo genera la respuesta usando ese contexto. RAG resuelve dos problemas: la información desactualizada del modelo (su corte de conocimiento es estático, pero la base puede actualizarse) y las alucinaciones (al anclar la respuesta en documentos concretos, se reduce la fabricación de hechos). Es la arquitectura dominante en aplicaciones empresariales que requieren consultar bases de conocimiento privadas.
+
+**ReAct (Reasoning + Acting)**. Es un patrón en el cual el modelo alterna entre pasos de razonamiento (pensar qué hacer) y pasos de acción (ejecutar una herramienta y observar el resultado). Por ejemplo, un agente ReAct puede pensar *necesito conocer el clima en Tokio*, ejecutar una llamada a una API meteorológica, observar el resultado, y continuar el razonamiento incorporando esa información. ReAct convierte al modelo en un agente que puede operar en el mundo, no solo conversar sobre él.
+
+**Function Calling propiamente dicho**. Es el mecanismo subyacente que permite a un modelo invocar funciones declaradas por el desarrollador. Se le pasa al modelo, junto con el prompt, un catálogo de funciones disponibles con su firma y descripción. El modelo decide cuándo llamarlas y con qué argumentos, y el resultado se incorpora al diálogo. Function calling es la base técnica sobre la cual se construyen agentes y sistemas RAG modernos.
+
+Vale la pena enfatizar que estas técnicas no son mutuamente excluyentes: un sistema productivo moderno típicamente combina prompts bien estructurados, few-shot examples, chain-of-thought, RAG y function calling de manera integrada.
+
+### 6.6 Parámetros de Inferencia
+
+Una vez formulado el prompt, el comportamiento del modelo depende también de varios parámetros que controlan el proceso de generación. Es importante que los estudiantes comprendan que un modelo de lenguaje no produce una respuesta determinista a partir de un prompt, sino que muestrea de una distribución de probabilidad sobre tokens. Los parámetros de inferencia controlan ese muestreo.
+
+**Temperature**. Controla el grado de aleatoriedad en la generación. Una temperatura baja (cerca de cero) produce respuestas más predecibles y consistentes: el modelo tiende a elegir siempre el token más probable. Una temperatura alta (cerca de uno o más) produce respuestas más variadas y creativas, pero también más propensas a errores o incoherencias. La temperatura escala los logits antes del softmax: temperaturas bajas concentran la probabilidad en pocos tokens, temperaturas altas la aplanan. Para tareas factuales y código se recomiendan temperaturas bajas; para escritura creativa, temperaturas moderadas; temperaturas muy altas raramente son útiles.
+
+**Seed**. Inicializa el generador de números pseudo-aleatorios que controla el muestreo. Fijar la seed permite reproducir exactamente la misma generación dadas las mismas entradas y parámetros. Es esencial para la depuración, para los experimentos científicos y para garantizar consistencia en producción. Vale la pena destacar que en muchos modelos comerciales la reproducibilidad exacta no está garantizada incluso con seed fija, por variaciones en el hardware o en las implementaciones de bajo nivel.
+
+**Top-k**. Restringe el muestreo a los k tokens más probables en cada paso, descartando el resto. Un top-k bajo (por ejemplo, 1) equivale a generación determinista; un top-k alto (por ejemplo, igual al tamaño del vocabulario) no impone restricción. Típicamente se usan valores entre 20 y 100.
+
+**Top-p (nucleus sampling)**. En lugar de fijar un número de tokens, fija una masa de probabilidad: se incluyen los tokens más probables hasta que su probabilidad acumulada alcance p (por ejemplo, 0.9). Esto adapta el conjunto de candidatos al contexto: cuando el modelo está muy seguro, pocos tokens superan el umbral; cuando hay más incertidumbre, se admiten más alternativas. Top-p suele preferirse a top-k porque se adapta dinámicamente.
+
+**Min-p**. Descarta tokens cuya probabilidad esté por debajo de un umbral relativo al token más probable. Si el token más probable tiene probabilidad 0.5 y min-p es 0.1, se descartan los tokens con probabilidad menor a 0.05. Es una técnica más reciente diseñada para evitar tokens extremadamente improbables sin imponer un número fijo.
+
+Vale la pena explicarle a los estudiantes que estos parámetros interactúan entre sí. Una configuración habitual es fijar temperatura moderada (alrededor de 0.7), top-p en 0.9 y dejar top-k sin restricción. Para tareas que requieren determinismo, lo más simple es fijar temperatura en cero o cercana, lo que vuelve irrelevantes los demás parámetros.
+
+### 6.7 Una recomendación pedagógica final
+
+La mejor manera de enseñar prompt engineering y parámetros de inferencia es experimentando en vivo. Recomendamos abrir Google AI Studio o un entorno similar durante la clase, presentar un mismo prompt con distintos parámetros y observar cómo cambian las respuestas. Probar el mismo problema matemático con temperatura cero y temperatura uno, con y sin Chain-of-Thought, con y sin few-shot. La intuición se construye mucho más rápido a través de la observación directa que a través de la descripción verbal.
+
+Una actividad efectiva es plantear un problema con respuesta correcta conocida (por ejemplo, un problema lógico o una traducción ambigua) y pedirle a los estudiantes que prueben distintas estrategias de prompting para maximizar la tasa de aciertos. Esto introduce la noción de evaluación sistemática de prompts, que es una habilidad profesional cada vez más demandada.
+
+---
+
+## 7. Cierre y conexión con el resto del programa
+
+Esta unidad cumple una función bisagra: cierra el bloque introductorio de fundamentos en ciencias de la computación abriendo simultáneamente la puerta a una alfabetización tecnológica contemporánea que los estudiantes encontrarán en cualquier ámbito profesional. El objetivo no es formar especialistas en IA en una sola unidad, sino dotar a los estudiantes de un marco mental que les permita seguir aprendiendo, evaluar críticamente afirmaciones sobre IA en medios y en empresas, y operar con responsabilidad en un entorno donde estas tecnologías son ubicuas.
+
+Conviene cerrar la unidad pidiendo a los estudiantes que articulen, en sus propias palabras, qué cambió en su comprensión de la IA desde el inicio de la unidad. Las respuestas suelen ser indicadores valiosos sobre qué fragmentos quedaron claros y cuáles requieren refuerzo en clases futuras. También es una oportunidad para anticipar la conexión con unidades posteriores del programa o con otras materias de la carrera.
+
+---
+
+## Referencias y lecturas recomendadas para el docente
+
+Russell, S. & Norvig, P. (2021). *Artificial Intelligence: A Modern Approach* (4ta edición). Pearson. Es el manual de referencia para la definición canónica y el marco general.
+
+Goodfellow, I., Bengio, Y. & Courville, A. (2016). *Deep Learning*. MIT Press. Disponible gratuitamente en línea. Fundamentos teóricos del deep learning.
+
+Vaswani, A. et al. (2017). *Attention is All You Need*. NeurIPS. El paper fundacional del Transformer, accesible y relativamente breve.
+
+De Vries-Gao, A. (2025). The carbon and water footprints of data centers and what this could mean for artificial intelligence. *Patterns*. Fuente de las tablas presentadas en la sección de impacto ambiental.
+
+Wei, J. et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. NeurIPS. Paper fundacional de CoT.
+
+Bender, E. M., Gebru, T., McMillan-Major, A. & Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? FAccT. Texto crítico recomendado para profundizar la dimensión ética.
