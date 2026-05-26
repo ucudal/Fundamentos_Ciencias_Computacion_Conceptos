@@ -24,7 +24,7 @@ La **percepción mediante sensores** y la **acción mediante actuadores** introd
 
 La **medida de desempeño** es quizá el componente que más conviene problematizar en clase. Toda IA está, explícita o implícitamente, optimizando algo. Una de las preguntas más fértiles que el docente puede sembrar es: ¿qué está optimizando este sistema, y quién decidió esa métrica? Buena parte de los problemas éticos que se discutirán más adelante derivan precisamente de medidas de desempeño mal especificadas o desalineadas con los valores humanos.
 
-### 1.2 Una observación pedagógica importante
+### 1.2 Una observación 
 
 Los estudiantes suelen llegar al aula con dos representaciones contradictorias y ambas inexactas de la IA. Por un lado, una representación inflada por la ciencia ficción, donde la IA es un ente consciente. Por otro, una representación reduccionista que la identifica con un chatbot. La definición de Russell y Norvig es útil precisamente porque ofrece un marco intermedio: la IA es comportamiento racional acoplado a un entorno, ni misticismo ni mera interfaz. Recomendamos abrir la clase recogiendo definiciones espontáneas de los estudiantes antes de presentar la canónica, y luego volver a esas definiciones para mostrar qué capturan bien y qué dejan afuera.
 
@@ -92,7 +92,7 @@ El procesamiento de lenguaje natural y la IA generativa se presentan como subcon
 
 El solapamiento entre ambos es lo que define a los modelos de lenguaje generativos modernos como GPT, Claude o Gemini: pertenecen simultáneamente al NLP (procesan lenguaje) y a la IA generativa (producen contenido nuevo). Antes del despegue de los transformers en 2017, el NLP estaba dominado por tareas discriminativas y la generación era una capacidad marginal; hoy la situación se invirtió.
 
-### 3.5 Una recomendación pedagógica
+### 3.5 Una recomendación 
 
 Conviene dibujar este diagrama en el pizarrón paso a paso y pedir a los estudiantes que ubiquen ejemplos concretos: ¿dónde va un sistema experto médico? ¿Dónde va el reconocimiento facial? ¿Dónde va Google Translate? ¿Dónde va Stable Diffusion? Este ejercicio cristaliza la jerarquía mucho mejor que la mera presentación visual del diagrama.
 
@@ -212,7 +212,7 @@ El sesgo tiene una particularidad técnica: no es necesariamente eliminable medi
 
 **Exfiltración y fuga de datos.** Los modelos de lenguaje grandes pueden memorizar fragmentos de sus datos de entrenamiento y reproducirlos en sus respuestas, lo que plantea riesgos cuando los datos de entrenamiento contienen información sensible. También hay riesgos en la dirección inversa: los datos que los usuarios envían a un modelo durante el uso pueden quedar registrados, ser reutilizados para entrenamiento o filtrarse en brechas de seguridad. Esta es una preocupación particularmente relevante en contextos profesionales donde la información compartida con un chatbot puede contener secretos comerciales o datos personales de terceros.
 
-### 5.3 Una orientación pedagógica para la sección ética
+### 5.3 Una orientación 
 
 Las discusiones éticas pueden caer fácilmente en dos polos igualmente improductivos: el moralismo abstracto, que enuncia principios sin conectarlos con decisiones técnicas, y el cinismo pragmático, que asume que nada se puede hacer porque las empresas grandes deciden todo. Recomendamos navegar entre ambos polos mediante casos concretos: presentar un sistema, identificar las decisiones técnicas y de diseño que tiene, y discutir qué hubiera podido hacerse distinto y con qué consecuencias.
 
@@ -292,7 +292,7 @@ Una vez formulado el prompt, el comportamiento del modelo depende también de va
 
 Vale la pena explicarle a los estudiantes que estos parámetros interactúan entre sí. Una configuración habitual es fijar temperatura moderada (alrededor de 0.7), top-p en 0.9 y dejar top-k sin restricción. Para tareas que requieren determinismo, lo más simple es fijar temperatura en cero o cercana, lo que vuelve irrelevantes los demás parámetros.
 
-### 6.7 Una recomendación pedagógica final
+### 6.7 Una recomendación 
 
 La mejor manera de enseñar prompt engineering y parámetros de inferencia es experimentando en vivo. Recomendamos abrir Google AI Studio o un entorno similar durante la clase, presentar un mismo prompt con distintos parámetros y observar cómo cambian las respuestas. Probar el mismo problema matemático con temperatura cero y temperatura uno, con y sin Chain-of-Thought, con y sin few-shot. La intuición se construye mucho más rápido a través de la observación directa que a través de la descripción verbal.
 
