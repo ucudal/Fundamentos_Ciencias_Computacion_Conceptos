@@ -1,27 +1,48 @@
 status: IN_PROGRESS
-responsable: @LylCB
-ultima_actualizacion: 2026-01-27
+responsable: @LylCB, @aleaurre
+ultima_actualizacion: 2026-05-26
 
-# Introducción a IA y aprendizaje
+# [Alfabetización en IA](./alfabetización_en_IA.md)
 
-## [¿Qué es la IA?](./1_ia.md)
+## ¿Qué es la IA?
+Delimitamos qué cuenta como IA y qué no, distinguiéndola de la programación tradicional y de otros sistemas automáticos.
+Recorremos la relación entre IA, machine learning y deep learning para ordenar el vocabulario antes de entrar en detalle.
 
-Ideas de alto nivel. Juego.
+## Historia
+Hilo conductor de Turing a hoy: prueba de Turing, inviernos de la IA, surgimiento del ML y salto reciente con redes profundas.
+Mostramos que cada gran avance respondió a un problema técnico concreto, para evitar tanto el hype como el escepticismo.
 
-## [Impacto Ambiental](2_ambiental.md)
+## Impacto Ambiental
+Analizamos el costo energético y de cómputo de entrenar y desplegar modelos a gran escala.
+Discutimos huella de carbono, consumo de agua y la asimetría entre quienes producen y quienes sufren ese impacto.
 
-Impacto.
+## Ética
+Abordamos sesgos, deepfakes, privacidad y responsabilidad a partir de casos reales (COMPAS, Arup, Air Canada, NYT vs. OpenAI).
+Introducimos el marco regulatorio actual (EU AI Act y discusiones locales) como contexto del trabajo profesional con IA.
 
-## [Machine Learning Supervisado](./3_supervisado.md)
+## Utilización de Modelos
+Criterios para elegir un modelo según la tarea, los datos disponibles y las restricciones del contexto.
+Práctica guiada de prompting y parámetros de inferencia (temperatura, top-p) en un entorno tipo Google AI Studio.
 
-Conceptos clave. Ejercicio de clasificador.
+# [Machine Learning Supervisado](./aprendizaje_automático.md)
 
-## [Nociones sobre Bias en IA](./4_bias.md)
+## Conceptos clave
+Idea central: aprender una función a partir de ejemplos etiquetados para generalizar a datos nuevos.
+Vocabulario base: dataset, features, label, instancia y división entre entrenamiento y prueba.
 
-Qué es el sesgo, porqué importa, cómo prevenirlo. Ejemplos
+## Modelos
+Recorrido por familias representativas: regresión lineal y logística, árboles de decisión y k-NN.
+Mostramos que distintos modelos imponen distintos sesgos inductivos y conviene elegir según el problema.
 
-## [Redes Neuronales](./5_RN.md)
+## Métricas de evaluación
+Accuracy y matriz de confusión con sus cuatro cuadrantes (VP, VN, FP, FN) como punto de partida.
+Precision, recall y F1 para entender que ninguna métrica única captura todos los tipos de error.
 
-Introducción. Juego.
+## Limitaciones Estructurales
+Overfitting, underfitting y el problema de generalizar más allá del conjunto de entrenamiento.
+Sesgos en los datos, fugas de información (data leakage) y supuestos que el modelo no puede cuestionar por sí mismo.
+
+### [Irat](./irat_aprendizaje_automático.md)
+### [Actividad/Tarea](./Actividad_Practica_Aprendizaje_Automático.ipynb)
 
 [🔙 Inicio de la unidad](../readme.md)
