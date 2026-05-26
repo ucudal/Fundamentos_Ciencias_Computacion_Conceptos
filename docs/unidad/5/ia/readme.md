@@ -42,7 +42,6 @@ Precision, recall y F1 para entender que ninguna métrica única captura todos l
 Overfitting, underfitting y el problema de generalizar más allá del conjunto de entrenamiento.
 Sesgos en los datos, fugas de información (data leakage) y supuestos que el modelo no puede cuestionar por sí mismo.
 
-### [Irat](./irat_aprendizaje_automático.md)
 ### [Actividad/Tarea](./Actividad_Practica_Aprendizaje_Automático.ipynb)
 
 [🔙 Inicio de la unidad](../readme.md)
