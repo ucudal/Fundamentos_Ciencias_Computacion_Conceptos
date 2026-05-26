@@ -1,6 +1,5 @@
 # Unidad 5. Aprendizaje Automático
-
-## Guía docente y notas de clase ampliadas
+## Notas de clase ampliadas
 
 ### Fundamentos en Ciencias de la Computación
 
