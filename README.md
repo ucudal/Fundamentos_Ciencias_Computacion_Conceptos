@@ -101,15 +101,14 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | estructuras | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
-| ia | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 
 ### 5. Alfabetización en IA
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| ia | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB) | 2026-01-27 |
-| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB) | 2026-01-26 |
+| ia | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB](https://github.com/LylCB), [@aleaurre](https://github.com/aleaurre) | 2026-05-26 |
+| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB), [@aleaurre](https://github.com/aleaurre)| 2026-01-26 |
 
 ### 6. Soluciones y trayectorias
 
