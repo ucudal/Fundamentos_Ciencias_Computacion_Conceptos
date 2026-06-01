@@ -45,7 +45,7 @@ Sesgos en los datos, fugas de información (data leakage) y supuestos que el mod
 ### [Actividad/Tarea](./Actividad_Practica_Aprendizaje_Automático.ipynb)
 
 
-# [Redes Neuronales](./1.2_redes_neuronales.md.md)
+# [Redes Neuronales](./1.2_redes_neuronales.md)
 
 ## Conceptos clave
 Idea central: una red neuronal es una función parametrizada que compone neuronas en capas y ajusta sus pesos a partir de datos para generalizar.
