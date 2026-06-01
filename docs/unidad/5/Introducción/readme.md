@@ -2,7 +2,7 @@ status: IN_PROGRESS
 responsable: @LylCB, @aleaurre
 ultima_actualizacion: 2026-05-26
 
-# [Alfabetización en IA](./alfabetización_en_IA.md)
+# [Alfabetización en IA](./1.0_alfabetización_en_IA.md)
 
 ## ¿Qué es la IA?
 Delimitamos qué cuenta como IA y qué no, distinguiéndola de la programación tradicional y de otros sistemas automáticos.
@@ -24,7 +24,7 @@ Introducimos el marco regulatorio actual (EU AI Act y discusiones locales) como 
 Criterios para elegir un modelo según la tarea, los datos disponibles y las restricciones del contexto.
 Práctica guiada de prompting y parámetros de inferencia (temperatura, top-p) en un entorno tipo Google AI Studio.
 
-# [Machine Learning Supervisado](./aprendizaje_automático.md)
+# [Machine Learning Supervisado](./1.1_aprendizaje_automático.md)
 
 ## Conceptos clave
 Idea central: aprender una función a partir de ejemplos etiquetados para generalizar a datos nuevos.
@@ -43,5 +43,31 @@ Overfitting, underfitting y el problema de generalizar más allá del conjunto d
 Sesgos en los datos, fugas de información (data leakage) y supuestos que el modelo no puede cuestionar por sí mismo.
 
 ### [Actividad/Tarea](./Actividad_Practica_Aprendizaje_Automático.ipynb)
+
+
+# [Redes Neuronales](./1.2_redes_neuronales.md.md)
+
+## Conceptos clave
+Idea central: una red neuronal es una función parametrizada que compone neuronas en capas y ajusta sus pesos a partir de datos para generalizar.
+
+## Neurona
+Unidad mínima: una suma ponderada de las entradas más un sesgo, pasada por una función de activación que decide la salida.
+Límite fundamental: un perceptrón simple solo separa clases linealmente (no resuelve XOR), y eso motiva apilar neuronas en capas.
+
+## Arquitecturas: de shallow a deep
+Una sola capa oculta basta para aproximar cualquier función continua (teorema de aproximación universal), pero sin garantías sobre cuántas unidades hacen falta ni sobre poder entrenarla.
+La profundidad aporta eficiencia y representaciones jerárquicas: rasgos simples en las primeras capas, conceptos abstractos en las últimas.
+
+## ¿Cómo aprende una red?
+Ciclo de cuatro pasos: predecir (forward pass), medir el error (pérdida), calcular gradientes (backpropagation) y ajustar pesos (descenso por gradiente con tasa η).
+Se repite por épocas: backpropagation calcula el gradiente, mientras que la optimización es la que efectivamente mueve los pesos.
+
+## Tipos de Redes Neuronales
+No hay una arquitectura única: se elige según el dato y el problema (MLP para tabular, CNN para imágenes, RNN/LSTM para secuencias). Los Transformers, basados en autoatención, son el estado del arte y la base de los grandes modelos de lenguaje (LLMs).
+
+## Limitaciones y cuidados
+Sobreajuste, subajuste y el desafío de generalizar más allá del conjunto de entrenamiento.
+Sesgos en los datos y confusiones frecuentes a evitar: perceptrón ≠ neurona moderna, y backpropagation ≠ descenso por gradiente.
+
 
 [🔙 Inicio de la unidad](../readme.md)
