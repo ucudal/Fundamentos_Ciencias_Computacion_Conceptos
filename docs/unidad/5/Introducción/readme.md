@@ -1,6 +1,6 @@
 status: IN_PROGRESS
 responsable: @LylCB, @aleaurre
-ultima_actualizacion: 2026-05-26
+ultima_actualizacion: 2026-05-31
 
 # [Alfabetización en IA](./1.0_alfabetización_en_IA.md)
 
@@ -24,7 +24,7 @@ Introducimos el marco regulatorio actual (EU AI Act y discusiones locales) como 
 Criterios para elegir un modelo según la tarea, los datos disponibles y las restricciones del contexto.
 Práctica guiada de prompting y parámetros de inferencia (temperatura, top-p) en un entorno tipo Google AI Studio.
 
-# [Machine Learning Supervisado](./1.1_aprendizaje_automático.md)
+# [Machine Learning](./1.1_aprendizaje_automático.md)
 
 ## Conceptos clave
 Idea central: aprender una función a partir de ejemplos etiquetados para generalizar a datos nuevos.
@@ -45,7 +45,7 @@ Sesgos en los datos, fugas de información (data leakage) y supuestos que el mod
 ### [Actividad/Tarea](./Actividad_Practica_Aprendizaje_Automático.ipynb)
 
 
-# [Redes Neuronales](./1.2_redes_neuronales.md)
+# [Neural Networks](./1.2_redes_neuronales.md)
 
 ## Conceptos clave
 Idea central: una red neuronal es una función parametrizada que compone neuronas en capas y ajusta sus pesos a partir de datos para generalizar.
