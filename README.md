@@ -107,8 +107,10 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| ia | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB](https://github.com/LylCB), [@aleaurre](https://github.com/aleaurre) | 2026-05-26 |
-| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB), [@aleaurre](https://github.com/aleaurre)| 2026-01-26 |
+| intro ia | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-26 |
+| machine learning | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-26 |
+| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-31 |
+| estado del arte | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-01-26 |
 
 ### 6. Soluciones y trayectorias
 
