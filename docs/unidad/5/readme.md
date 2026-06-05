@@ -26,8 +26,5 @@
   * (recreo)
   * Consulta Parcial
 
-**Clase 14, 3 de Julio de 2026**
-*Ayuda para Tareas
-*(recreo)
-*Consulta Parcial
+
 
