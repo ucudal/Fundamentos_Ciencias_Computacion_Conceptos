@@ -1,30 +1,49 @@
 # Alfabetización en Inteligencia Artificial
 
-## [Introducción a IA](Introducción/readme.md)
+# Cronograma
 
-* **Clase 12, 12 de Junio de 2026:**
-  * Alfabetización en IA
-  * irat Aprendizaje Automático
-  * (recreo)
-  * Aprendizaje Automático
-  * Actividad Aprendizaje Automático
+## 12/06
 
-* **Clase 13, 26 de Junio de 2026:**
-  * irat Redes Neuronales
-  * Redes Neuronales
-  * (recreo)
+- **08:05 - 08:25:** Prueba corta de concurrencia
+- **08:25 - 09:20:** Teórico, [Introducción a IA](Introducción/readme.md)
+- **09:20 - 09:30:** Recreo
+- **09:30 - 10:30:** Teórico, Machine Learning
+- **10:30 - 10:45:** Presentación de actividad de ML (entrega: sábado 20, 23:59)
+- **10:45 - 10:50:** Entrega de parciales
 
-## [Estado del Arte](Actualidad/readme.md)
+**Tarea domiciliaria:** Lecturas de Machine Learning y redes neuronales.
 
-* **Clase 13, 26 de Junio de 2026:**
-  * (recreo)
-  * Estado del Arte
-  * Actividad Estado del Arte
+---
 
-* **Clase 14, 3 de Julio de 2026:**
-  * Ayuda para Tareas
-  * (recreo)
-  * Consulta Parcial
+## 19/06
+
+**FERIADO**
+
+---
+
+## 26/06
+
+- **08:05 - 08:25:** iRAT (Alfabetización + ML + RN)
+- **08:25 - 08:45:** tRAT
+- **08:45 - 09:20:** Teórico — Redes Neuronales (RN)
+- **09:20 - 09:30:** Recreo
+- **09:30 - 09:50:** Teórico — Finalizar RN
+- **09:50 - 10:50:** Teórico —  [Estado del Arte](Actualidad/readme.md)
+
+---
+
+## 03/07
+
+- **08:00 - 09:20:** Finalizar SOTA (si hace falta)
+- **09:30 - 10:50:** Preparación de final
+
+---
+
+## 10/07
+
+- **08:00 - 10:50:** Final
+
+
 
 
 
