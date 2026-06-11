@@ -29,7 +29,7 @@
 
 ## Viernes 26/06
 
-- **08:05 - 08:25:** iRAT (Alfabetización + ML + RN)
+- **08:05 - 08:25:** iRAT (RN)
 - **08:25 - 08:45:** tRAT
 - **08:45 - 09:20:** Teórico — Redes Neuronales (RN)
 - **09:20 - 09:30:** Recreo
