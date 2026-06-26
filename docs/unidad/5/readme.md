@@ -1,6 +1,6 @@
 # Alfabetización en Inteligencia Artificial
 
-# La unidad se divide en dos grandes áreas:
+La unidad se divide en dos grandes áreas:
 
 ## [Introducción a IA](Introducción/readme.md): 
 
