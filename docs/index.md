@@ -11,7 +11,6 @@ _This course offers an introductory overview of the conceptual, technological, a
 3. [Sistemas y Herramientas para la Ingeniería](unidad/3/readme.md)
 4. [Pensar en Estructuras y Procesos](unidad/4/readme.md)
 5. [Alfabetización en Inteligencia Artificial](unidad/5/readme.md)
-6. [Construcción de Soluciones y Trayectorias Profesionales](unidad/6/readme.md)
 
 ## Forma de aprobación
 

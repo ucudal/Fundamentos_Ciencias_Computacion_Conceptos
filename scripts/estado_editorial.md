@@ -36,10 +36,10 @@
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| ia | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB) | 2026-01-27 |
-| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB](https://github.com/LylCB) | 2026-01-26 |
+| Introducción | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| Actualidad | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
 
-### 6. Soluciones y trayectorias
+### Unidad 6
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|

@@ -55,6 +55,8 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 
+
+
 <!-- ESTADO_EDITORIAL_START -->
 
 ![Progreso](https://img.shields.io/badge/progreso-62%25-orange)
@@ -63,8 +65,8 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 ### Estado editorial sub-secciones
 
-- DRAFT: 4
-- IN_PROGRESS: 2
+- DRAFT: 5
+- IN_PROGRESS: 1
 - REVIEW: 0
 - COMPLETE: 10
 
@@ -101,18 +103,17 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | estructuras | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
+| ia | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 
 ### 5. Alfabetización en IA
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| intro ia | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-26 |
-| machine learning | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-26 |
-| redes | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-05-31 |
-| estado del arte | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@aleaurre](https://github.com/aleaurre), [@LylCB](https://github.com/LylCB) | 2026-01-26 |
+| Introducción | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| Actualidad | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
 
-### 6. Soluciones y trayectorias
+### Unidad 6
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
@@ -122,6 +123,8 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
+
 
 
 
