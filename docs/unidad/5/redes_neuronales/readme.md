@@ -1,22 +1,12 @@
+status: COMPLETE
+responsable: @LylCB, @aleaurre
+ultima_actualizacion: 2026-05-31
+
 # Unidad 5. Redes Neuronales 
 **El acceso a la presentación se obtiene mediante: https://canva.link/tuz5lfoavuroyji**
 
 ### Fundamentos en Ciencias de la Computación
 > Este documento expande y formaliza el contenido de la presentación de clase.
----
-
-## Tabla de contenidos
-
-1. [Introducción](#1-introducción)
-2. [El perceptrón: la neurona artificial](#2-el-perceptrón-la-neurona-artificial)
-3. [De la neurona a la red](#3-de-la-neurona-a-la-red)
-4. [Redes poco profundas (*shallow networks*)](#4-redes-poco-profundas-shallow-networks)
-5. [Redes profundas (*deep networks*)](#5-redes-profundas-deep-networks)
-6. [¿Cómo aprende una red? El entrenamiento](#6-cómo-aprende-una-red-el-entrenamiento)
-7. [Tipos de redes neuronales](#7-tipos-de-redes-neuronales)
-8. [Síntesis y conclusiones](#8-síntesis-y-conclusiones)
-9. [Glosario](#9-glosario)
-10. [Referencias](#10-referencias)
 
 ---
 
@@ -192,7 +182,7 @@ buscar los pesos y sesgos que hagan que las predicciones se parezcan lo más pos
 a las respuestas reales (Goodfellow et al., 2016). Ese proceso es un ciclo de cuatro
 pasos que se repite muchas veces sobre los datos:
 
-![Ciclo de entrenamiento de una red neuronal](figura_entrenamiento.svg)
+<!--  ![Ciclo de entrenamiento de una red neuronal](figura_entrenamiento.svg) -->
 
 > **Convención de notación.** A lo largo de esta sección, $\hat{y}$ (con "sombrero")
 > es lo que **predice** la red; $y$ (sin sombrero) es la **respuesta correcta** o

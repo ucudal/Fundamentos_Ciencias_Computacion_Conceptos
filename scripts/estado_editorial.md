@@ -29,20 +29,14 @@
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | estructuras | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
-| ia | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 
 ### 5. Alfabetización en IA
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| Introducción | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
-| Actualidad | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
-
-### Unidad 6
-
-| Sub-unidad | Status | Responsable | Última actualización |
-|------------|--------|-------------|----------------------|
-| app | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| roles | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| aprendizaje_automatico | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| alfabetizacion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| estado_arte | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| redes_neuronales | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
 

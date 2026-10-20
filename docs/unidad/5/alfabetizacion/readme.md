@@ -1,3 +1,7 @@
+status: COMPLETE
+responsable: @LylCB, @aleaurre
+ultima_actualizacion: 2026-05-31
+
 # Unidad 5, Alfabetización en Inteligencia Artificial
 **El acceso a las diapositvas es: https://canva.link/o9f6h1lr28e6uy7** 
 

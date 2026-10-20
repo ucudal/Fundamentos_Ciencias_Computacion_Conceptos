@@ -57,18 +57,19 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 
 
 
+
 <!-- ESTADO_EDITORIAL_START -->
 
-![Progreso](https://img.shields.io/badge/progreso-62%25-orange)
+![Progreso](https://img.shields.io/badge/progreso-93%25-brightgreen)
 
-**Progreso global:** 62%
+**Progreso global:** 93%
 
 ### Estado editorial sub-secciones
 
-- DRAFT: 5
-- IN_PROGRESS: 1
+- DRAFT: 1
+- IN_PROGRESS: 0
 - REVIEW: 0
-- COMPLETE: 10
+- COMPLETE: 14
 
 ---
 
@@ -103,26 +104,21 @@ PYTHON=.venv/bin/python ./scripts/check_estructura.sh
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
 | estructuras | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
-| ia | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
 | condicion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@abadiejosse](https://github.com/abadiejosse) | 2026-01-21 |
 
 ### 5. Alfabetización en IA
 
 | Sub-unidad | Status | Responsable | Última actualización |
 |------------|--------|-------------|----------------------|
-| Introducción | ![IN_PROGRESS](https://img.shields.io/badge/status-IN--PROGRESS-blue) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
-| Actualidad | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
-
-### Unidad 6
-
-| Sub-unidad | Status | Responsable | Última actualización |
-|------------|--------|-------------|----------------------|
-| app | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
-| roles | ![DRAFT](https://img.shields.io/badge/status-DRAFT-lightgrey) | Nombre del docente | 2026-01-01 |
+| aprendizaje_automatico | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| alfabetizacion | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| estado_arte | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
+| redes_neuronales | ![COMPLETE](https://img.shields.io/badge/status-COMPLETE-brightgreen) | [@LylCB, @aleaurre](https://github.com/LylCB, @aleaurre) | 2026-05-31 |
 
 
 
 <!-- ESTADO_EDITORIAL_END -->
+
 
 
 

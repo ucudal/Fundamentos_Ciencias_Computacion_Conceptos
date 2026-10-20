@@ -6,3 +6,8 @@
   display: none;
 }
 
+/* Ocultar indicadores de estado editorial en la navegación */
+.md-nav__link .md-status {
+    display: none;
+}
+

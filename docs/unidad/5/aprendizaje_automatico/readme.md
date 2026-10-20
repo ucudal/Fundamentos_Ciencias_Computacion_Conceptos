@@ -1,3 +1,7 @@
+status: COMPLETE
+responsable: @LylCB, @aleaurre
+ultima_actualizacion: 2026-05-31
+
 # Unidad 5. Aprendizaje Automático
 **Acceso a las diapositivas mediante: https://canva.link/agn8zrp4c4hf24l** 
 
